@@ -1,7 +1,15 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from 'next/head';
 
-export default function Home() {
+import Navbar from '../components/Navbar';
+import Home from '../components/Home';
+import About from '../components/About';
+import Skill from '../components/Skill';
+import Project from '../components/Project';
+import Contact from '../components/Contact';
+import Game from '../components/Game';
+import ThreeCanvas from '@/components/ThreeCanvas';
+
+export default function Index() {
   return (
     <>
       <Head>
@@ -10,11 +18,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-      </main>
+      <Navbar />
+      <Home />
+      <About />
+      <Skill />
+      <Project />
+      <Contact />
+      <Game />
+      <ThreeCanvas />
     </>
   )
 }
