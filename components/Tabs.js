@@ -12,7 +12,7 @@ const Tabs = ({ keys, children }) => {
                         role="tablist"
                     >
                         {keys.map((key, index) => (
-                            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+                            <li key={index} className="-mb-px mr-2 last:mr-0 flex-auto text-center">
                                 <Link
                                     className={
                                         "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
@@ -37,7 +37,7 @@ const Tabs = ({ keys, children }) => {
                         <div className="px-4 py-5 flex-auto">
                             <div className="tab-content tab-space">
                                 {children.map((child, index)=>(
-                                    <div className={openTab === index ? "block" : "hidden"} id={"link"+index}>
+                                    <div key={index} className={openTab === index ? "block" : "hidden"} id={"link"+index}>
                                         {child}
                                     </div>
                                 ))}
