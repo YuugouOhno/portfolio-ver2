@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.17",
+    "@material-tailwind/react": "^1.4.2",
     "@react-three/drei": "^9.57.3",
     "@react-three/fiber": "^8.12.0",
     "@types/three": "^0.149.0",
