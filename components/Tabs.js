@@ -2,8 +2,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const Tabs = ({ keys, children }) => {
-    const [openTab, setOpenTab] = useState(1);
-    console.log(children[0])
+    const [openTab, setOpenTab] = useState(0);
     return (
         <>
             <div className="container px-8 py-5">
