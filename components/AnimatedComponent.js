@@ -1,6 +1,6 @@
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 function AnimatedComponent({ children }) {
   const controls = useAnimation();
