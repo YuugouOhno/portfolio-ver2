@@ -1,6 +1,7 @@
-import AnimatedComponent from './AnimatedComponent';
+import AnimatedComponent from '../AnimatedComponent';
 import SkillBar from "./SkillBar.js"
 import React from "react";
+import Link from 'next/link';
 
 const Tabs = () => {
     const [openTab, setOpenTab] = React.useState(1);
@@ -13,7 +14,7 @@ const Tabs = () => {
                         role="tablist"
                     >
                         <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                            <a
+                            <Link
                                 className={
                                     "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                                     (openTab === 1
@@ -28,11 +29,11 @@ const Tabs = () => {
                                 href="#link1"
                                 role="tablist"
                             >
-                                <i className="fas fa-space-shuttle text-base mr-1"></i> Profile
-                            </a>
+                                About
+                            </Link>
                         </li>
                         <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                            <a
+                            <Link
                                 className={
                                     "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                                     (openTab === 2
@@ -47,11 +48,11 @@ const Tabs = () => {
                                 href="#link2"
                                 role="tablist"
                             >
-                                <i className="fas fa-cog text-base mr-1"></i>  Settings
-                            </a>
+                                Skill
+                            </Link>
                         </li>
                         <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                            <a
+                            <Link
                                 className={
                                     "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                                     (openTab === 3
@@ -66,8 +67,8 @@ const Tabs = () => {
                                 href="#link3"
                                 role="tablist"
                             >
-                                <i className="fas fa-briefcase text-base mr-1"></i>  Options
-                            </a>
+                                History
+                            </Link>
                         </li>
                     </ul>
                     <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded">
