@@ -6,7 +6,7 @@ const ThreeCanvas = () => {
         <Canvas>
             <mesh>
                 <boxGeometry />
-                <meshStandardMaterial />
+                <meshNormalMaterial />
             </mesh>
             <OrbitControls />
         </Canvas>
