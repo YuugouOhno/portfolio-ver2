@@ -1,6 +1,6 @@
 import Image from "next/legacy/image";
 import AccountLists from "@/components/contact/AccountLists"
-import ImageAndTitle from "@/components/animation/ImageAndTitle";
+import CardAndTitle from "@/components/animation/CardAndTitle";
 
 const Contact = () => {
     return (
@@ -11,15 +11,17 @@ const Contact = () => {
                     <div className="grid gap-10 lg:gap-10 grid-cols-2 md:grid-cols-4 ">
                         {AccountLists.map((account, index) => (
                             <div key={index}>
-                                <ImageAndTitle title={account.title} url={account.url} isTransition={true}>
-                                    <Image
-                                        src={account.src}
-                                        alt={account.title}
-                                        width="2500"
-                                        height="2500"
-                                        layout="intrinsic"
-                                    />
-                                </ImageAndTitle>
+                                <Link href={account.url} target="_blank">
+                                    <CardAndTitle title={account.title}>
+                                        <Image
+                                            src={account.src}
+                                            alt={account.title}
+                                            width="2500"
+                                            height="2500"
+                                            layout="intrinsic"
+                                        />
+                                    </CardAndTitle>
+                                </Link>
                             </div>
                         ))}
                     </div>

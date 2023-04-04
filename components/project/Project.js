@@ -1,7 +1,9 @@
 import Image from "next/legacy/image";
+import Link from "next/link";
 import ProjectLists from "./ProjectLists";
-import ImageAndTitle from "@/components/animation/ImageAndTitle";
+import CardAndTitle from "@/components/animation/CardAndTitle";
 import Tags from "@/components/Tags";
+import FlipCard from "@/components/animation/FlipCard";
 
 const Project = () => {
     return (
@@ -12,16 +14,18 @@ const Project = () => {
                 <div className="grid gap-10 lg:gap-10 md:grid-cols-2 ">
                     {ProjectLists.map(project => (
                         <div key={project.id}>
-                            <ImageAndTitle title={project.title} url={project.url}>
-                                <Image
-                                    src={project.image_path}
-                                    height="180"
-                                    width="320"
-                                    className="transition-all"
-                                    alt="project image"
-                                    layout="responsive"
-                                />
-                            </ImageAndTitle>
+                            <CardAndTitle title={project.title} url={project.url}>
+                                <FlipCard back="back">
+                                    <Image
+                                        src={project.image_path}
+                                        height="180"
+                                        width="320"
+                                        className="transition-all"
+                                        alt="project image"
+                                        layout="responsive"
+                                    />
+                                </FlipCard>
+                            </CardAndTitle>
                             <Tags tags={project.tags} />
                         </div>
                     ))}
