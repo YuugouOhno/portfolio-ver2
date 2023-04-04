@@ -1,4 +1,4 @@
-import AnimatedComponent from '@/components/AnimatedComponent';
+import AnimatedComponent from '@/components/animation/AppearanceContainer';
 import SkillBar from "./SkillBar.js"
 import Tabs from "@/components/Tabs"
 

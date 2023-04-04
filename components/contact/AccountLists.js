@@ -1,27 +1,24 @@
 const AccountLists = [
     {
         src:"/accounts/twitter.png",
-        alt:"twitter",
-        width:1034,
-        height:851
+        title:"twitter",
+        url:"https://twitter.com/YuugouOhno"
+        
     },
     {
         src:"/accounts/github-white.png",
-        alt:"github",
-        width:1000,
-        height:1000
+        title:"github",
+        url:"https://github.com/YuugouOhno"
     },
     {
         src:"/accounts/qita.png",
-        alt:"qita",
-        width:1000,
-        height:1000
+        title:"qita",
+        url:"https://qiita.com/YuugouOhno"
     },
     {
         src:"/accounts/wantedly-white.png",
-        alt:"wantedly",
-        width:100,
-        height:100
+        title:"wantedly",
+        url:"https://www.wantedly.com/id/YuugouOhno"
     },
 ]
 
