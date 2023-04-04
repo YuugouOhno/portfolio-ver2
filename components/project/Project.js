@@ -1,5 +1,4 @@
 import Image from "next/legacy/image";
-import Link from "next/link";
 import ProjectLists from "./ProjectLists";
 import CardAndTitle from "@/components/animation/CardAndTitle";
 import Tags from "@/components/Tags";

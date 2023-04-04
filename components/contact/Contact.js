@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/legacy/image";
 import AccountLists from "@/components/contact/AccountLists"
 import CardAndTitle from "@/components/animation/CardAndTitle";
