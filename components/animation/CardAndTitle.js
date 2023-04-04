@@ -3,14 +3,14 @@ import AnimatedComponent from '@/components/animation/AppearanceContainer';
 const CardAndTitle = ({ title, children }) => {
     return (
         <AnimatedComponent>
-            <div className="cursor-pointer group">
+            <div className="cursor-pointer group flex flex-col justify-center items-center">
                 <div
                     className=
-                    "relative overflow-hidden transition-all rounded-md hover:scale-105">
+                    "relative overflow-hidden transition-all hover:scale-105 flex justify-center items-center">
                     
-                        <div style={{ width: '100%', position: 'relative' }}>
+                        {/* <div style={{ width: '100%', height: '100%', position: 'relative' }}> */}
                             {children}
-                        </div>
+                        {/* </div> */}
                 </div>
                 <h2 className="mt-2 text-xl text-center font-semibold tracking-normal text-brand-primary my-4">
                         <span

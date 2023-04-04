@@ -17,8 +17,8 @@ const Contact = () => {
                                         <Image
                                             src={account.src}
                                             alt={account.title}
-                                            width="2500"
-                                            height="2500"
+                                            width="250"
+                                            height="250"
                                             layout="intrinsic"
                                         />
                                     </CardAndTitle>

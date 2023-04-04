@@ -10,20 +10,25 @@ const Project = () => {
             <h1>Project</h1>
             <p>This is the Project page</p>
             <div className="container px-8 py-5 lg:py-8 mx-auto xl:px-5 max-w-screen-lg">
-                <div className="grid gap-10 lg:gap-10 md:grid-cols-2 ">
+                <div className="grid gap-10 lg:gap-10 md:grid-cols-2 flex flex-col justify-center items-center">
                     {ProjectLists.map(project => (
-                        <div key={project.id}>
+                        <div key={project.id} className="flex flex-col justify-center">
                             <CardAndTitle title={project.title} url={project.url}>
-                                <FlipCard back="back">
-                                    <Image
-                                        src={project.image_path}
-                                        height="180"
-                                        width="320"
-                                        className="transition-all"
-                                        alt="project image"
-                                        layout="responsive"
-                                    />
-                                </FlipCard>
+                                {/* <div className="w-96 h-52"> */}
+                                    <FlipCard>
+                                        <Image
+                                            src={project.image_path}
+                                            className="transition-all rounded-md p-auto"
+                                            alt="project image"
+                                            width="368"
+                                            height="207"
+                                            layout="fixed"
+                                        />
+                                        <div >
+
+                                        </div>
+                                    </FlipCard>
+                                {/* </div> */}
                             </CardAndTitle>
                             <Tags tags={project.tags} />
                         </div>
