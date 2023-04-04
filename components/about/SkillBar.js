@@ -6,7 +6,6 @@ const SkillBar = ({ label, percentage }) => {
     const skillBarRef = useRef(null);
 
     useEffect(() => {
-        console.log(1)
         const observer = new IntersectionObserver(
             (entries) => {
                 if (entries[0].isIntersecting) {
@@ -29,7 +28,6 @@ const SkillBar = ({ label, percentage }) => {
     }, []);
 
     useEffect(() => {
-        console.log(2)
         if (isVisible) {
             setTimeout(() => {
                 setBarWidth(percentage);

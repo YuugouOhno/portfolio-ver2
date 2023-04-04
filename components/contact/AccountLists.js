@@ -1,19 +1,27 @@
 const AccountLists = [
     {
         src:"/accounts/twitter.png",
-        alt:"twitter"
+        alt:"twitter",
+        width:1034,
+        height:851
     },
     {
-        src:"/accounts/github.png",
-        alt:"github"
+        src:"/accounts/github-white.png",
+        alt:"github",
+        width:1000,
+        height:1000
     },
     {
         src:"/accounts/qita.png",
-        alt:"qita"
+        alt:"qita",
+        width:1000,
+        height:1000
     },
     {
-        src:"/accounts/wantedly.png",
-        alt:"wantedly"
+        src:"/accounts/wantedly-white.png",
+        alt:"wantedly",
+        width:100,
+        height:100
     },
 ]
 
