@@ -1,10 +1,15 @@
 import Image from "next/legacy/image";
+import { useState } from 'react';
+
 import ProjectLists from "./ProjectLists";
 import CardAndTitle from "@/components/animation/CardAndTitle";
 import Tags from "@/components/Tags";
 import FlipCard from "@/components/animation/FlipCard";
 
+
 const Project = () => {
+    const [whichFlippe, setWhichFlippe] = useState("");
+
     return (
         <div id="project" className="pt-20 w-screen flex flex-col justify-center items-center">
             <h1>Project</h1>
@@ -14,21 +19,18 @@ const Project = () => {
                     {ProjectLists.map(project => (
                         <div key={project.id} className="flex flex-col justify-center">
                             <CardAndTitle title={project.title} url={project.url}>
-                                {/* <div className="w-96 h-52"> */}
-                                    <FlipCard>
-                                        <Image
-                                            src={project.image_path}
-                                            className="transition-all rounded-md p-auto"
-                                            alt="project image"
-                                            width="368"
-                                            height="207"
-                                            layout="fixed"
-                                        />
-                                        <div >
-
-                                        </div>
-                                    </FlipCard>
-                                {/* </div> */}
+                                <FlipCard value={project.id} whichFlippe={whichFlippe} setWhichFlippe={setWhichFlippe}>
+                                    <Image
+                                        src={project.image_path}
+                                        className="transition-all rounded-md p-auto"
+                                        alt="project image"
+                                        width="368"
+                                        height="207"
+                                        layout="fixed"
+                                    />
+                                    <div >
+                                    </div>
+                                </FlipCard>
                             </CardAndTitle>
                             <Tags tags={project.tags} />
                         </div>

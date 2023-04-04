@@ -1,7 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const FlipCard = ({ children }) => {
+const FlipCard = ({ value, whichFlippe, setWhichFlippe, children }) => {
     const [isFlipped, setIsFlipped] = useState(false);
+    console.log(value,whichFlippe)
+    useEffect(() => {
+        if (whichFlippe === value) {
+            setIsFlipped(true);
+        } else {
+            setIsFlipped(false);
+        }
+    });
 
     const styles = {
         flipCard: {
@@ -34,7 +42,7 @@ const FlipCard = ({ children }) => {
             alignItems: "center",
             textAlign: 'center',
         },
-        
+
         flipCardFront: {
             position: 'absolute',
             width: '100%',
@@ -53,20 +61,20 @@ const FlipCard = ({ children }) => {
             alignItems: "center",
             transform: 'rotateY(180deg)',
             textAlign: 'center',
-            backgroundColor : 'gray',
+            backgroundColor: 'gray',
             borderRadius: "0.375rem"
         },
     }
 
     const flipCard = () => {
-        setIsFlipped(!isFlipped);
+        setWhichFlippe(value)
     };
 
     return (
         <div style={styles.flipCard} onClick={flipCard}>
             <div style={isFlipped ? styles.flippedCardInner : styles.flipCardInner} >
-                <div style={styles.flipCardFront}>{ children[0] }</div>
-                <div style={styles.flipCardBack}>{ children[1] }</div>
+                <div style={styles.flipCardFront}>{children[0]}</div>
+                <div style={styles.flipCardBack}>{children[1]}</div>
             </div>
         </div>
     );
