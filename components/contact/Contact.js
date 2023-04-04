@@ -8,7 +8,7 @@ const Contact = () => {
             <h1>Contact</h1>
             <div className="flex">
                 <div className="container px-8 py-5 lg:py-8 mx-auto xl:px-5 max-w-screen-lg">
-                    <div className="grid gap-10 lg:gap-10 md:grid-cols-4 ">
+                    <div className="grid gap-10 lg:gap-10 grid-cols-2 md:grid-cols-4 ">
                         {AccountLists.map((account, index) => (
                             <div key={index}>
                                 <ImageAndTitle title={account.title} url={account.url} isTransition={true}>
