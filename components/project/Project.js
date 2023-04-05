@@ -11,7 +11,7 @@ const Project = () => {
     const [whichFlippe, setWhichFlippe] = useState("");
 
     return (
-        <div id="project" className="pt-20 w-screen flex flex-col justify-center items-center">
+        <div id="project" className="pt-20 w-screen flex flex-col justify-center items-center  bg-gray-300 text-white">
             <h1>Project</h1>
             <p>This is the Project page</p>
             <div className="container px-8 py-5 lg:py-8 mx-auto xl:px-5 max-w-screen-lg">

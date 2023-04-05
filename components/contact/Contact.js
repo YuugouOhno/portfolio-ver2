@@ -5,7 +5,7 @@ import CardAndTitle from "@/components/animation/CardAndTitle";
 
 const Contact = () => {
     return (
-        <div id="contact" className="h-screen w-screen flex flex-col justify-center items-center">
+        <div id="contact" className="h-screen w-screen flex flex-col justify-center items-center bg-gray-500 text-white">
             <h1>Contact</h1>
             <div className="flex">
                 <div className="container px-8 py-5 lg:py-8 mx-auto xl:px-5 max-w-screen-lg">

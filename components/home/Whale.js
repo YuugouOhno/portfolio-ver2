@@ -1,8 +1,7 @@
 import { useEffect, useRef, Suspense } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { Html, useProgress, useGLTF, useAnimations } from '@react-three/drei'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { Html, useProgress, useGLTF, useAnimations, OrbitControls } from '@react-three/drei'
 import Typography from '@mui/material/Typography'
-import { OrbitControls } from '@react-three/drei'
 
 const ModelPath = '/models/whale1.glb'
 
@@ -19,9 +18,13 @@ const Loader = () => {
 
 const Model = (props) => {
     const group = useRef()
+    const { size } = useThree()
     const gltf = useGLTF(ModelPath)
     const { actions } = useAnimations(gltf.animations, group)
-
+    // モデルのscaleを調整する
+    // const scaleFactor = size.width < 768 ? 0.5 : 1
+    const scaleFactor = size.width / 1000
+    group.current.scale.set(scaleFactor,scaleFactor,scaleFactor)
     useEffect(() => {
         console.log(gltf) // find out the name of your action
         actions['Swim'].play()
@@ -45,18 +48,37 @@ const Model = (props) => {
 useGLTF.preload(ModelPath)
 
 const Whale = () => {
+    const styles = {
+        videoArea: {
+            position: "fixed",
+            zIndex: "-1",
+            top: "0",
+            right: "0",
+            left: "0",
+            bottom: "0",
+            overflow: "hidden",
+        },
+
+        video: {
+            zIndex: "-1",
+            width: "100%",
+            height: "100%",
+        }
+    }
     return (
-        <Canvas>
-            <OrbitControls />
+        <div style={styles.videoArea}>
+            <Canvas style={styles.video}>
+                <OrbitControls />
 
-            <ambientLight intensity={0.5} />
-            <spotLight position={[0, 10, 0]} angle={1} penumbra={1} />
-            <pointLight position={[0, 10, 0]} />
+                <ambientLight intensity={0.5} />
+                <spotLight position={[0, 10, 0]} angle={1} penumbra={1} />
+                <pointLight position={[0, 10, 0]} />
 
-            <Suspense fallback={<Loader />}>
-                <Model position={[0, 0, 0]} rotation={[0, 0, 0]} scale={0.6} />
-            </Suspense>
-        </Canvas>
+                <Suspense fallback={<Loader />}>
+                    <Model position={[0, 0, 0]} rotation={[0, 0, 0]} scale={0.6} />
+                </Suspense>
+            </Canvas>
+        </div>
     )
 }
 
