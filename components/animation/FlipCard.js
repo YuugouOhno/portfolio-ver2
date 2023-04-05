@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 
 const FlipCard = ({ value, whichFlippe, setWhichFlippe, children }) => {
     const [isFlipped, setIsFlipped] = useState(false);
-    console.log(value,whichFlippe)
     useEffect(() => {
         if (whichFlippe === value) {
             setIsFlipped(true);
