@@ -1,11 +1,11 @@
 import Head from 'next/head';
 
-import Navbar from '../components/Navbar';
-import Home from '../components/Home';
-import About from '../components/about/About';
-import Project from '../components/project/Project';
-import Contact from '../components/contact/Contact';
-import Game from '../components/Game';
+import Navbar from '@/components/Navbar';
+import Home from '@/components/home/Home';
+import About from '@/components/about/About';
+import Project from '@/components/project/Project';
+import Contact from '@/components/contact/Contact';
+import Game from '@/components/Game';
 import ThreeCanvas from '@/components/ThreeCanvas';
 
 export default function Index() {

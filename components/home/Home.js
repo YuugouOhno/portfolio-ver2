@@ -1,11 +1,12 @@
 import Image from "next/legacy/image";
 import AnimatedComponent from '@/components/animation/AppearanceContainer';
+import Parrot from "@/components/home/Parrot"
 
 const Home = () => {
     return (
         <AnimatedComponent>
             <div id="home" className="pt-20 h-screen w-screen flex flex-col justify-center items-center">
-
+                <Parrot />
                 <Image
                     className="rounded-full"
                     src="/home/icon.png"
