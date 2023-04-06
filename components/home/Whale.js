@@ -24,10 +24,11 @@ const Model = (props) => {
     // モデルのscaleを調整する
     // const scaleFactor = size.width < 768 ? 0.5 : 1
     const scaleFactor = size.width / 1000
-    group.current.scale.set(scaleFactor,scaleFactor,scaleFactor)
+    
     useEffect(() => {
         console.log(gltf) // find out the name of your action
         actions['Swim'].play()
+        group.current.scale.set(scaleFactor,scaleFactor,scaleFactor)
     })
 
     useFrame(() => {
