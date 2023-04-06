@@ -12,7 +12,7 @@ const About = () => {
                     <AnimatedComponent>
                         <Image
                             className="rounded-full"
-                            src="/home/icon.png"
+                            src="/about/icon.png"
                             width={250}
                             height={250}
                             alt="icon"
