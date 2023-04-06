@@ -1,5 +1,5 @@
 import AnimatedComponent from '@/components/animation/AppearanceContainer';
-import Whale from "@/components/home/Whale"
+import Whale from "@/components/homeSection/Whale"
 
 const Home = () => {
     return (

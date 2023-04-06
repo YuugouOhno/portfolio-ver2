@@ -39,7 +39,7 @@ const SkillBar = ({ label, percentage }) => {
         <div className="w-full" ref={skillBarRef}>
             <div className="flex justify-between mb-2">
                 <span>{label}</span>
-                <span>{percentage}%</span>
+                {/* <span>{percentage}%</span> */}
             </div>
             <div className="w-full h-4 bg-gray-300 rounded">
                 <div

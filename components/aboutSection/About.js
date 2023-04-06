@@ -1,11 +1,12 @@
 import Image from "next/legacy/image";
 import AnimatedComponent from '@/components/animation/AppearanceContainer';
-import SkillBar from "./SkillBar.js"
+import Skill from "@/components/aboutSection/Skill.js"
+import History from "@/components/aboutSection/History.js"
 import Tabs from "@/components/Tabs"
 
 const About = () => {
     return (
-        <div id="about" className="pt-20 h-screen w-screen flex flex-col items-center bg-black text-white">
+        <div id="about" className="pt-20 w-screen flex flex-col items-center bg-black text-white">
             <Tabs keys={["ABOUT", "SKILL", "HISTORY"]}>
                 <div>
                     <AnimatedComponent>
@@ -21,16 +22,8 @@ const About = () => {
                         <p>2024年4月からチームラボという会社のエンジニアになります。</p>
                     </AnimatedComponent>
                 </div>
-                <div>
-                    <SkillBar label="HTML" percentage={90} />
-                    <SkillBar label="CSS" percentage={85} />
-                    <SkillBar label="JavaScript" percentage={80} />
-                </div>
-                <div>
-                    <AnimatedComponent>
-                        <h1>Hello, world!</h1>
-                    </AnimatedComponent>
-                </div>
+                <Skill />
+                <History />
             </Tabs>
         </div>
     );
