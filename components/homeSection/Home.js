@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <AnimatedComponent>
             <div id="home" className="pt-20 h-screen w-screen flex flex-col justify-center items-center">
-                <Whale />
+                {/* <Whale /> */}
                 <div className="mt-56">
                     <h1 className="text-8xl font-bold text-center my-4">
                         Yuugou Ohno

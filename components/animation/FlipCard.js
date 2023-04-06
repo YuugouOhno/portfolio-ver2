@@ -16,8 +16,6 @@ const FlipCard = ({ value, whichFlippe, setWhichFlippe, children }) => {
             height: '13rem',
             perspective: '1000px',
             transition: 'transform 0.6s',
-            justifyContent: "center",
-            alignItems: "center",
             textAlign: 'center',
         },
         flipCardInner: {
@@ -26,8 +24,6 @@ const FlipCard = ({ value, whichFlippe, setWhichFlippe, children }) => {
             position: 'relative',
             transformStyle: 'preserve-3d',
             transition: 'transform 0.6s',
-            justifyContent: "center",
-            alignItems: "center",
             textAlign: 'center',
         },
         flippedCardInner: {
@@ -37,8 +33,6 @@ const FlipCard = ({ value, whichFlippe, setWhichFlippe, children }) => {
             transformStyle: 'preserve-3d',
             transition: 'transform 0.6s',
             transform: 'rotateY(180deg)',
-            justifyContent: "center",
-            alignItems: "center",
             textAlign: 'center',
         },
 
@@ -47,8 +41,6 @@ const FlipCard = ({ value, whichFlippe, setWhichFlippe, children }) => {
             width: '100%',
             height: '100%',
             backfaceVisibility: 'hidden',
-            justifyContent: "center",
-            alignItems: "center",
             textAlign: 'center',
         },
         flipCardBack: {
@@ -56,8 +48,6 @@ const FlipCard = ({ value, whichFlippe, setWhichFlippe, children }) => {
             width: '100%',
             height: '100%',
             backfaceVisibility: 'hidden',
-            justifyContent: "center",
-            alignItems: "center",
             transform: 'rotateY(180deg)',
             textAlign: 'center',
             backgroundColor: 'gray',
