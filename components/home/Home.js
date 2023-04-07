@@ -1,11 +1,13 @@
 import AnimatedComponent from '@/components/animation/AppearanceContainer';
-import Whale from "@/components/homeSection/Whale"
+import Whale from "@/components/home/Whale"
+import BackgroundImage from "@/components/home/BackgroundImage";
 
 const Home = () => {
     return (
         <AnimatedComponent>
             <div id="home" className="pt-20 h-screen w-screen flex flex-col justify-center items-center">
-                {/* <Whale /> */}
+                <Whale />
+                <BackgroundImage />
                 <div className="mt-56">
                     <h1 className="text-8xl font-bold text-center my-4">
                         Yuugou Ohno

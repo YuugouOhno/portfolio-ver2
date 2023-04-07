@@ -2,6 +2,7 @@ import { useEffect, useRef, Suspense } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Html, useProgress, useGLTF, useAnimations, OrbitControls } from '@react-three/drei'
 import Typography from '@mui/material/Typography'
+// import BackgroundOcean from '@/components/homeSection/BackgroundOcean'
 
 const ModelPath = '/models/whale1.glb'
 
@@ -50,7 +51,7 @@ useGLTF.preload(ModelPath)
 
 const Whale = () => {
     const styles = {
-        videoArea: {
+        canvasArea: {
             position: "fixed",
             zIndex: "-1",
             top: "0",
@@ -60,15 +61,16 @@ const Whale = () => {
             overflow: "hidden",
         },
 
-        video: {
+        canvas: {
             zIndex: "-1",
             width: "100%",
             height: "100%",
         }
     }
     return (
-        <div style={styles.videoArea}>
-            <Canvas style={styles.video}>
+        <div style={styles.canvasArea}>
+            <Canvas style={styles.canvas}>
+                {/* <BackgroundOcean /> */}
                 <OrbitControls />
 
                 <ambientLight intensity={0.5} />
