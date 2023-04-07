@@ -5,7 +5,7 @@ const Tabs = ({ keys, children }) => {
     const [openTab, setOpenTab] = useState(0);
     return (
         <>
-            <div className="container px-8 py-5">
+            <div className="container px-8 py-2">
                 <div className="w-full">
                     <ul
                         className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
