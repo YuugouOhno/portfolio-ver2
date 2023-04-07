@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-const SkillBar = ({ label, percentage }) => {
+const SkillBar = ({ label, percentage, color = "bg-green-500" }) => {
     const [barWidth, setBarWidth] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
     const skillBarRef = useRef(null);
@@ -36,14 +36,13 @@ const SkillBar = ({ label, percentage }) => {
     }, [isVisible, percentage]);
 
     return (
-        <div className="w-full" ref={skillBarRef}>
-            <div className="flex justify-between mb-2">
+        <div className="w-full md:flex md:my-2" ref={skillBarRef}>
+            <div className="flex w-36">
                 <span>{label}</span>
-                {/* <span>{percentage}%</span> */}
             </div>
-            <div className="w-full h-4 bg-gray-300 rounded">
+            <div className="w-full my-1 h-4 bg-gray-300 rounded">
                 <div
-                    className="h-full bg-green-500 rounded transition-all duration-1000"
+                    className={color + " h-full rounded transition-all duration-1000"}
                     style={{ width: `${barWidth}%` }}
                 ></div>
             </div>
