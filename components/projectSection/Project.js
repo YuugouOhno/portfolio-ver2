@@ -1,10 +1,10 @@
-import Image from "next/legacy/image";
 import { useState } from 'react';
+import Image from "next/legacy/image";
 
-import ProjectLists from "./ProjectLists";
+import ProjectLists from "@/components/projectSection/ProjectLists";
 import CardAndTitle from "@/components/animation/CardAndTitle";
-import Tags from "@/components/elements/Tags";
 import FlipCard from "@/components/animation/FlipCard";
+import Tags from "@/components/elements/Tags";
 
 
 const Project = () => {

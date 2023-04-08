@@ -1,4 +1,5 @@
 import Image from "next/legacy/image";
+
 import AnimatedComponent from '@/components/animation/AppearanceContainer';
 
 const AboutMe = () => {

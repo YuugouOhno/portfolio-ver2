@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/legacy/image";
+import { useTheme } from 'next-themes';
 import AccountLists from "@/components/contactSection/AccountLists"
 import CardAndTitle from "@/components/animation/CardAndTitle";
-import { useTheme } from 'next-themes';
 
 const Contact = () => {
     const { theme } = useTheme();

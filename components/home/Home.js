@@ -1,6 +1,6 @@
 import AnimatedComponent from '@/components/animation/AppearanceContainer';
-import Whale from "@/components/home/Whale"
 import BackgroundImage from "@/components/home/BackgroundImage";
+import Whale from "@/components/home/Whale"
 
 const Home = () => {
     return (
