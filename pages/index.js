@@ -6,7 +6,6 @@ import About from '@/components/aboutSection/About';
 import Project from '@/components/projectSection/Project';
 import Contact from '@/components/contactSection/Contact';
 import Game from '@/components/Game';
-// import ThreeCanvas from '@/components/ThreeCanvas';
 
 export default function Index() {
   return (
