@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import Navbar from '@/components/Navbar';
-import Home from '@/components/homeSection/Home';
+import Home from '@/components/home/Home';
 import About from '@/components/aboutSection/About';
 import Project from '@/components/projectSection/Project';
 import Contact from '@/components/contactSection/Contact';
