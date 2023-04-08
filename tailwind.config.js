@@ -8,8 +8,14 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class', //ダークモードを有効化する
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        black: '#000000',
+        white: '#ffffff',
+      },
+    },
   },
   plugins: [],
 }

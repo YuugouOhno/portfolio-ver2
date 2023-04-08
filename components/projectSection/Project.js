@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import ProjectLists from "./ProjectLists";
 import CardAndTitle from "@/components/animation/CardAndTitle";
-import Tags from "@/components/Tags";
+import Tags from "@/components/elements/Tags";
 import FlipCard from "@/components/animation/FlipCard";
 
 
@@ -11,7 +11,7 @@ const Project = () => {
     const [whichFlippe, setWhichFlippe] = useState("");
 
     return (
-        <div id="project" className="pt-20 w-screen flex flex-col justify-center items-center  bg-gray-300 text-white">
+        <div id="project" className="pt-20 w-screen flex flex-col justify-center items-center  text-black bg-white dark:text-white dark:bg-black">
             <h1>Project</h1>
             <p>This is the Project page</p>
             <div className="container px-8 py-5 lg:py-8 mx-auto xl:px-5 max-w-screen-lg">
