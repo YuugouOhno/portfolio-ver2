@@ -12,7 +12,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkgrey: '#222831', //darkModeで使用したい色を拡張定義
+        black: '#000000',
+        white: '#ffffff',
       },
     },
   },

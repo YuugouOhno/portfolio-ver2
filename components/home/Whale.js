@@ -2,7 +2,6 @@ import { useEffect, useRef, Suspense } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Html, useProgress, useGLTF, useAnimations, OrbitControls } from '@react-three/drei'
 import Typography from '@mui/material/Typography'
-// import BackgroundOcean from '@/components/homeSection/BackgroundOcean'
 
 const ModelPath = '/models/whale1.glb'
 
@@ -23,11 +22,9 @@ const Model = (props) => {
     const gltf = useGLTF(ModelPath)
     const { actions } = useAnimations(gltf.animations, group)
     // モデルのscaleを調整する
-    // const scaleFactor = size.width < 768 ? 0.5 : 1
     const scaleFactor = size.width / 1000
     
     useEffect(() => {
-        console.log(gltf) // find out the name of your action
         actions['Swim'].play()
         group.current.scale.set(scaleFactor,scaleFactor,scaleFactor)
     })
@@ -70,7 +67,6 @@ const Whale = () => {
     return (
         <div style={styles.canvasArea}>
             <Canvas style={styles.canvas}>
-                {/* <BackgroundOcean /> */}
                 <OrbitControls />
 
                 <ambientLight intensity={0.5} />
