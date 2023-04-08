@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import ProjectLists from "./ProjectLists";
 import CardAndTitle from "@/components/animation/CardAndTitle";
-import Tags from "@/components/Tags";
+import Tags from "@/components/elements/Tags";
 import FlipCard from "@/components/animation/FlipCard";
 
 

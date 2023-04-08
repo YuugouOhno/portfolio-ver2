@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/elements/Navbar';
 import Home from '@/components/home/Home';
 import About from '@/components/aboutSection/About';
 import Project from '@/components/projectSection/Project';

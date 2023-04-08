@@ -1,7 +1,7 @@
 import AboutMe from "@/components/aboutSection/AboutMe.js"
 import Skill from "@/components/aboutSection/Skill.js"
 import History from "@/components/aboutSection/History.js"
-import Tabs from "@/components/Tabs"
+import Tabs from "@/components/elements/Tabs"
 
 const About = () => {
     return (
