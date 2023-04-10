@@ -51,8 +51,8 @@ const ProjectLists = [
     {
         id: 8,
         title: 'portfolio-ver2',
-        image_path: '/projects/4.png',
-        tags: ["Next.js"],
+        image_path: '/projects/8.png',
+        tags: ["Next.js","Three.js"],
         url: ""
     },
 ];
