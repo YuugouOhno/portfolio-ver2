@@ -19,8 +19,6 @@ const BackgroundImage = () => {
             <Image
                 className="z"
                 src="/bg/Ocean.jpg"
-                width={2500}
-                height={2500}
                 alt="background image"
                 layout="fill"
             />
