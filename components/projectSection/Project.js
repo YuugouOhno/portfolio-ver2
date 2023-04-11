@@ -1,15 +1,11 @@
-import { useState } from 'react';
 import Image from "next/legacy/image";
 
 import ProjectLists from "@/components/projectSection/ProjectLists";
-import CardAndTitle from "@/components/animation/CardAndTitle";
-import FlipCard from "@/components/animation/FlipCard";
+import ProjectCard from "@/components/projectSection/ProjectCard";
 import Tags from "@/components/elements/Tags";
 
 
 const Project = () => {
-    const [whichFlippe, setWhichFlippe] = useState("");
-
     return (
         <div id="project" className="pt-20 w-screen flex flex-col justify-center items-center  text-black bg-white dark:text-white dark:bg-black">
             <h1>Project</h1>
@@ -18,20 +14,17 @@ const Project = () => {
                 <div className="grid gap-10 lg:gap-10 md:grid-cols-2 flex flex-col justify-center items-start">
                     {ProjectLists.map(project => (
                         <div key={project.id} className="flex flex-col justify-center">
-                            <CardAndTitle title={project.title} url={project.url}>
-                                <FlipCard value={project.id} whichFlippe={whichFlippe} setWhichFlippe={setWhichFlippe}>
-                                    <Image
-                                        src={project.image_path}
-                                        className="transition-all rounded-md p-auto"
-                                        alt="project image"
-                                        width="368"
-                                        height="207"
-                                        layout="fixed"
-                                    />
-                                    <div >
-                                    </div>
-                                </FlipCard>
-                            </CardAndTitle>
+                            <ProjectCard title={project.title}>
+                                <Image
+                                    src={project.image_path}
+                                    className="transition-all rounded-md p-auto"
+                                    alt="project image"
+                                    width="368"
+                                    height="207"
+                                    layout="fixed"
+                                />
+                                <div>test</div>
+                            </ProjectCard>
                             <Tags tags={project.tags} />
                         </div>
                     ))}
