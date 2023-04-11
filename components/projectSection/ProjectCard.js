@@ -86,6 +86,7 @@ const ProjectCard = ({ title, children }) => {
                             </div>
                         </div>
                         <div style={styles.flipCardBack}>
+                            
                             {children[1]}
                         </div>
                     </div>
