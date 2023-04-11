@@ -1,5 +1,6 @@
 import AnimatedComponent from '@/components/animation/AppearanceContainer';
 import { useState } from 'react';
+import { XMarkIcon } from '@heroicons/react/24/solid'
 
 const ProjectCard = ({ title, children }) => {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -85,7 +86,7 @@ const ProjectCard = ({ title, children }) => {
                                 {children[0]}
                             </div>
                         </div>
-                        <div style={styles.flipCardBack}>
+                        <div style={styles.flipCardBack}><XMarkIcon className="h-16 w-16 top-3 left-3 fixed" onClick={flipCard} />
                             
                             {children[1]}
                         </div>
