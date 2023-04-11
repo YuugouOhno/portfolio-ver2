@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import { MoonIcon } from '@heroicons/react/24/solid'
+import { SunIcon } from '@heroicons/react/24/solid'
+
 
 const DarkModeToggle = () => {
   const { theme, setTheme } = useTheme();
@@ -22,9 +25,9 @@ const DarkModeToggle = () => {
       {mounted && (
         <>
           {theme === 'dark' ? (
-            <p>moon</p>
+            <MoonIcon />
           ) : (
-            <p>sun</p>
+            <SunIcon />
           )}
         </>
       )}
