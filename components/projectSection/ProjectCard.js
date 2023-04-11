@@ -62,15 +62,6 @@ const ProjectCard = ({ title, children }) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-        },
-        overwrap: {
-            position: "fixed",
-            top: "0",
-            left: "0",
-            width: "100%",
-            height: "100%",
-            zIndex: "10",
-            backgroundColor: 'rgba(255,255,255,0.7)',
         }
     }
 
@@ -81,7 +72,7 @@ const ProjectCard = ({ title, children }) => {
     return (
         <AnimatedComponent>
             <div className="cursor-pointer group flex flex-col justify-center items-center">
-                {isFlipped ? <div style={styles.overwrap} onClick={flipCard}></div> : ""}
+                {isFlipped ? <div className="fixed top-0 left-0 w-full h-full z-10 bg-black bg-opacity-70 dark:bg-white dark:bg-opacity-70" onClick={flipCard}></div> : ""}
                 <div style={isFlipped ? styles.flippedCard : styles.flipCard}>
                     <div style={isFlipped ? styles.flippedCardInner : styles.flipCardInner} >
                         <div style={styles.flipCardFront} onClick={flipCard}>
@@ -91,7 +82,7 @@ const ProjectCard = ({ title, children }) => {
                         </div>
                         <div style={styles.flipCardBack}>
                             {children[1]}
-                            <XMarkIcon className="z-10 h-16 w-16 top-3 left-3 fixed text-black" onClick={flipCard} />
+                            <XMarkIcon className="z-10 h-16 w-16 top-3 left-3 fixed text-black dark:text-white" onClick={flipCard} />
                         </div>
                     </div>
                 </div>
