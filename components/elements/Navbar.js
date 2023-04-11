@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import DarkModeToggle from '@/components/elements/DarkModeToggle';
 import AddFish from '@/components/elements/AddFish';
+import LanguageToggle from '@/components/elements/LanguageToggle';
 
 const Navbar = () => {
     return (
@@ -41,6 +42,7 @@ const Navbar = () => {
                 <div className="flex">
                     <DarkModeToggle />
                     <AddFish />
+                    <LanguageToggle />
                 </div>
             </div>
         </nav >
