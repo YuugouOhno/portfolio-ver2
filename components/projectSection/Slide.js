@@ -26,7 +26,7 @@ const Slide = () => {
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index} className="text-center flex justify-center items-center">
-                        <div className="w-full h-full bg-white text-center flex justify-center items-center">
+                        <div className="w-full h-full dark:bg-black bg-white text-center flex justify-center items-center">
                             <Image
                                 src={slide} 
                                 className="transition-all rounded-md p-auto"
