@@ -2,6 +2,7 @@ import Image from "next/legacy/image";
 
 import ProjectLists from "@/components/projectSection/ProjectLists";
 import ProjectCard from "@/components/projectSection/ProjectCard";
+import Slide from "@/components/projectSection/Slide";
 import Tags from "@/components/elements/Tags";
 
 
@@ -23,7 +24,7 @@ const Project = () => {
                                     height="207"
                                     layout="fixed"
                                 />
-                                <div>test</div>
+                                <Slide/>
                             </ProjectCard>
                             <Tags tags={project.tags} />
                         </div>

@@ -59,6 +59,9 @@ const ProjectCard = ({ title, children }) => {
             textAlign: 'center',
             backgroundColor: 'white',
             borderRadius: "0.375rem",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
         },
         overwrap: {
             position: "fixed",
@@ -86,9 +89,9 @@ const ProjectCard = ({ title, children }) => {
                                 {children[0]}
                             </div>
                         </div>
-                        <div style={styles.flipCardBack}><XMarkIcon className="h-16 w-16 top-3 left-3 fixed" onClick={flipCard} />
-                            
+                        <div style={styles.flipCardBack}>
                             {children[1]}
+                            <XMarkIcon className="z-10 h-16 w-16 top-3 left-3 fixed text-black" onClick={flipCard} />
                         </div>
                     </div>
                 </div>
