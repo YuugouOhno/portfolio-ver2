@@ -57,7 +57,7 @@ const ProjectCard = ({ title, children }) => {
             backfaceVisibility: 'hidden',
             transform: 'rotateY(180deg)',
             textAlign: 'center',
-            backgroundColor: 'red',
+            backgroundColor: 'white',
             borderRadius: "0.375rem",
         },
         overwrap: {
