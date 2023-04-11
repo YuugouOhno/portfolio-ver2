@@ -45,8 +45,8 @@ const FlipCard = ({ value, whichFlippe, setWhichFlippe, children }) => {
         },
         flipCardBack: {
             position: 'absolute',
-            width: '100%',
-            height: '100%',
+            width: '300%',
+            height: '300%',
             backfaceVisibility: 'hidden',
             transform: 'rotateY(180deg)',
             textAlign: 'center',
