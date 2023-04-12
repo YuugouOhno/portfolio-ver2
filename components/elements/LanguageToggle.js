@@ -1,5 +1,4 @@
 import { MdLanguage } from "react-icons/md";
-import { IconContext } from "react-icons";
 
 const LanguageToggle = () => {
     const changeLanguage = () => {
