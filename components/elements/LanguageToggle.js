@@ -1,4 +1,5 @@
-import { GrLanguage } from "react-icons/gr";
+import { MdLanguage } from "react-icons/md";
+import { IconContext } from "react-icons";
 
 const LanguageToggle = () => {
     const changeLanguage = () => {
@@ -11,7 +12,7 @@ const LanguageToggle = () => {
             className="p-3 h-12 w-12 order-4"
             onClick={() => changeLanguage()}
         >
-            <GrLanguage className="h-6 w-6"/>
+            <MdLanguage className="h-6 w-6 text-black dark:text-white" />
         </button>
     )
 }
