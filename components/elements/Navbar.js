@@ -36,18 +36,18 @@ const Navbar = () => {
                 </div>
                 <div className="flex md:hidden p-3">
                     <FaHamburger className="h-6 w-6" onClick={()=>setIsOpen(!isOpen)} />
-                    <div className={isOpen ? "fixed top-0 left-0 bg-gray-400 font-medium mt-20 w-24 p-4" : 'hidden'}>
+                    <div className={isOpen ? "fixed top-0 left-0 bold font-medium text-7xl mt-20 w-auto p-4" : 'hidden'}>
                     <ul className="flex flex-col">
-                        <li>
+                        <li className="dark:bg-black dark:bg-opacity-70 bg-white bg-opacity-70 rounded-lg my-1">
                             <Link href="#home" className={activeSection == 'home' ? 'text-purple-600' : ''}>Home</Link>
                         </li>
-                        <li>
+                        <li className="dark:bg-black dark:bg-opacity-70 bg-white bg-opacity-70 rounded-lg my-1">
                             <Link href="#about" className={activeSection == 'about' ? 'text-purple-600' : ''}>About</Link>
                         </li>
-                        <li>
+                        <li className="dark:bg-black dark:bg-opacity-70 bg-white bg-opacity-70 rounded-lg my-1">
                             <Link href="#project" className={activeSection == 'project' ? 'text-purple-600' : ''}>Project</Link>
                         </li>
-                        <li>
+                        <li className="dark:bg-black dark:bg-opacity-70 bg-white bg-opacity-70 rounded-lg my-1">
                             <Link href="#contact" className={activeSection == 'contact' ? 'text-purple-600' : ''}>Contact</Link>
                         </li>
                     </ul>
