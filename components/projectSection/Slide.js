@@ -38,7 +38,7 @@ const Slide = () => {
                         </div>
                     </SwiperSlide>
                 ))}
-                <div class="swiper-scrollbar"></div>
+                <div className="swiper-scrollbar"></div>
             </Swiper>
         </>
     );

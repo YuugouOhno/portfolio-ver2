@@ -7,7 +7,7 @@ import CardAndTitle from "@/components/animation/CardAndTitle";
 const Contact = () => {
     const { theme } = useTheme();
     return (
-        <div id="contact" className="h-screen w-screen flex flex-col justify-center items-center text-black bg-white dark:text-white dark:bg-black">
+        <section id="contact" className="h-screen w-screen flex flex-col justify-center items-center text-black bg-white dark:text-white dark:bg-black">
             <h1>Contact</h1>
             <div className="flex">
                 <div className="container px-8 py-5 lg:py-8 mx-auto xl:px-5 max-w-screen-lg">
@@ -40,7 +40,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

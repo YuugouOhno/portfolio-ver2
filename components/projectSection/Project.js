@@ -8,7 +8,7 @@ import Tags from "@/components/elements/Tags";
 
 const Project = () => {
     return (
-        <div id="project" className="pt-20 w-screen flex flex-col justify-center items-center  text-black bg-white dark:text-white dark:bg-black">
+        <section id="project" className="pt-20 w-screen flex flex-col justify-center items-center  text-black bg-white dark:text-white dark:bg-black">
             <h1>Project</h1>
             <p>This is the Project page</p>
             <div className="container px-8 py-5 lg:py-8 mx-auto xl:px-5 max-w-screen-lg">
@@ -31,7 +31,7 @@ const Project = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

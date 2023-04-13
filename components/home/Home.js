@@ -5,7 +5,7 @@ import Whale from "@/components/home/Whale"
 const Home = () => {
     return (
         <AnimatedComponent>
-            <div id="home" className="pt-20 h-screen w-screen flex flex-col justify-center items-center">
+            <section id="home" className="pt-20 h-screen w-screen flex flex-col justify-center items-center">
                 <Whale />
                 <BackgroundImage />
                 <div className="mt-56">
@@ -16,7 +16,7 @@ const Home = () => {
                         web engineer
                     </h2>
                 </div>
-            </div >
+            </section >
         </AnimatedComponent>
     )
 }
