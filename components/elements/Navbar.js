@@ -7,12 +7,14 @@ import Brackets from '@/components/elements/Brackets';
 import { FaHamburger } from "react-icons/fa";
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import getGeolocation from '@/lib/getGeolocation';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isAffix, setIsAffix] = useState(false);
     const [activeSection, setActiveSection] = useState("");
     const { theme } = useTheme();
+    getGeolocation()
     useEffect(() => {
         const handleScroll = () => {
             const sections = document.querySelectorAll('section');
