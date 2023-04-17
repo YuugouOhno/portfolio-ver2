@@ -3,18 +3,20 @@ import Image from "next/legacy/image";
 import DarkModeToggle from '@/components/elements/DarkModeToggle';
 import AddFish from '@/components/elements/AddFish';
 import LanguageToggle from '@/components/elements/LanguageToggle';
+import Weather from '@/components/elements/Weather';
 import Brackets from '@/components/elements/Brackets';
 import { FaHamburger } from "react-icons/fa";
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import getGeolocation from '@/lib/getGeolocation';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isAffix, setIsAffix] = useState(false);
     const [activeSection, setActiveSection] = useState("");
     const { theme } = useTheme();
-    getGeolocation()
+
+    
+
     useEffect(() => {
         const handleScroll = () => {
             const sections = document.querySelectorAll('section');
@@ -94,6 +96,7 @@ const Navbar = () => {
                     <DarkModeToggle />
                     <AddFish />
                     <LanguageToggle />
+                    <Weather />
                 </div>
             </div>
         </nav >
