@@ -15,8 +15,6 @@ const Navbar = () => {
     const [activeSection, setActiveSection] = useState("");
     const { theme } = useTheme();
 
-    
-
     useEffect(() => {
         const handleScroll = () => {
             const sections = document.querySelectorAll('section');

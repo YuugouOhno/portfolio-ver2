@@ -7,11 +7,12 @@ const ProjectCard = ({ title, children }) => {
 
     const styles = {
         flipCard: {
-            width: '24rem',
-            height: '13.5rem',
+            width: '100%',
+            aspectRatio: "16 / 9",
             perspective: '1000px',
             transition: 'transform 0.6s',
             textAlign: 'center',
+            display: 'block',
         },
         flippedCard: {
             position: 'fixed',

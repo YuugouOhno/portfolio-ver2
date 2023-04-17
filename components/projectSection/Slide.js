@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -31,9 +31,9 @@ const Slide = () => {
                                 src={slide} 
                                 className="transition-all rounded-md p-auto"
                                 alt="project image"
-                                width="736"
-                                height="414"
-                                layout="fixed"
+                                width="16000"
+                                height="9000"
+                                layout="intrinsic"
                             />
                         </div>
                     </SwiperSlide>
