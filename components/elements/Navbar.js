@@ -3,6 +3,7 @@ import Image from "next/legacy/image";
 import DarkModeToggle from '@/components/elements/DarkModeToggle';
 import AddFish from '@/components/elements/AddFish';
 import LanguageToggle from '@/components/elements/LanguageToggle';
+import NowWeather from '@/components/elements/NowWeather';
 import Brackets from '@/components/elements/Brackets';
 import { FaHamburger } from "react-icons/fa";
 import { useState, useEffect } from 'react';
@@ -13,6 +14,9 @@ const Navbar = () => {
     const [isAffix, setIsAffix] = useState(false);
     const [activeSection, setActiveSection] = useState("");
     const { theme } = useTheme();
+
+    
+
     useEffect(() => {
         const handleScroll = () => {
             const sections = document.querySelectorAll('section');
@@ -92,6 +96,7 @@ const Navbar = () => {
                     <DarkModeToggle />
                     <AddFish />
                     <LanguageToggle />
+                    <NowWeather />
                 </div>
             </div>
         </nav >
