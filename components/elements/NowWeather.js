@@ -8,14 +8,11 @@ const NowWeather = () => {
 
     useEffect(() => {
         getGeolocation(setLocate)
-        console.log("緯度:",locate.latitude, "経度:",locate.longitude);
-
     }, []);
 
     useEffect(() => {
         if (locate) {
             getWeather(locate.latitude, locate.longitude, setWeathere)
-            console.log("天気:",weather);
         }
     }, [locate])
 

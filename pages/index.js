@@ -5,7 +5,8 @@ import Home from '@/components/home/Home';
 import About from '@/components/aboutSection/About';
 import Project from '@/components/projectSection/Project';
 import Contact from '@/components/contactSection/Contact';
-import Game from '@/components/Game';
+import Bey from '@/components/Bey';
+import Presentation from '@/components/presentationSection/Presentation'
 
 export default function Index() {
   return (
@@ -21,7 +22,8 @@ export default function Index() {
       <About />
       <Project />
       <Contact />
-      <Game />
+      <Bey />
+      <Presentation />
       {/* <ThreeCanvas /> */}
     </div>
   )

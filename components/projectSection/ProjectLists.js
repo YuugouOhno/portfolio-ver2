@@ -1,59 +1,93 @@
 const ProjectLists = [
     {
-        id: 1,
+        id: 'jugglink',
         title: 'jugglink',
-        image_path: '/projects/1.png',
         tags: ["Laravel", "Vue"],
-        url: ""
+        slides_num: 6,
+        links: {
+            github: "https://github.com/YuugouOhno/Jugglink",
+            deploy: "https://jugglink.herokuapp.com/",
+        }
     },
     {
-        id: 2,
+        id: 'mikata',
         title: '小学生の味方',
-        image_path: '/projects/2.png',
         tags: ["Laravel", "JavqaScript"],
-        url: ""
+        slides_num: 9,
+        links: {
+            github: "https://github.com/YuugouOhno/Imposters",
+            deploy: "https://imposters-t-test1.herokuapp.com/",
+        }
     },
     {
-        id: 3,
+        id: 'arletter',
         title: 'ARチョコ',
-        image_path: '/projects/3.png',
         tags: ["Laravel", "react", "AR.js"],
-        url: ""
+        slides_num: 6,
+        links: {
+            github: "https://github.com/hiroki-yod/ar-choco",
+            deploy: "https://ar-name-card.vercel.app/",
+        }
     },
     {
-        id: 4,
+        id: 'portfolio1',
         title: 'portfolio-ver1',
-        image_path: '/projects/4.png',
         tags: ["JavaScript", "Three.js"],
-        url: ""
+        slides_num: 1,
+        links: {
+            github: "https://github.com/YuugouOhno/portfolio-ver1",
+            deploy: "https://yuugouohno-ver1.vercel.app/",
+        }
     },
     {
-        id: 5,
+        id: 'boidsmodel',
         title: '魚',
-        image_path: '/projects/5.png',
         tags: ["JavaScript", "Three.js"],
-        url: ""
+        slides_num: 1,
+        links: {
+            github: "https://github.com/YuugouOhno/threejs-boids",
+            deploy: "https://threejs-boids.vercel.app/",
+        }
     },
     {
-        id: 6,
-        title: '僕の考えた最強の名刺',
-        image_path: '/projects/6.png',
+        id: 'namecard',
+        title: '【技育camp】マンスリーハッカソン-vol1\n努力賞受賞『僕の考えた最強の名刺』',
         tags: ["JavaScript", "Three.js", "AR.js"],
-        url: ""
+        slides_num: 1,
+        links: {
+            github: "https://github.com/YuugouOhno/ar-name-card",
+            deploy: "https://ar-name-card.vercel.app/",
+        }
     },
     {
-        id: 7,
+        id: 'escape',
         title: 'モテ逃げボタン',
-        image_path: '/projects/7.png',
         tags: ["JavaScript"],
-        url: ""
+        slides_num: 1,
+        links: {
+            github: "https://github.com/YuugouOhno/escape-button",
+            store: "https://chrome.google.com/webstore/detail/%E3%83%A2%E3%83%86%E3%81%9F%E3%81%84%E3%81%91%E3%81%A9%E3%80%81%E9%80%83%E3%81%92%E3%82%89%E3%82%8C%E3%81%9F%E3%81%84%EF%BC%9F-%E3%81%9D%E3%82%93%E3%81%AA%E5%90%9B%E3%81%AB%E3%81%AF%E3%80%8C%E3%83%A2%E3%83%86%E9%80%83/kohcgdhioffjhcdadeimmnncdbpmljce?hl=ja",
+            topaz: "https://topaz.dev/projects/c47da0d3f3e021209efe",
+        }
     },
     {
-        id: 8,
+        id: 'portfolio2',
         title: 'portfolio-ver2',
-        image_path: '/projects/8.png',
         tags: ["Next.js","Three.js"],
-        url: ""
+        slides_num: 1,
+        links: {
+            github: "https://github.com/YuugouOhno/portfolio-ver2",
+            deploy: "https://yuugouohno.vercel.app/",
+        }
+    },
+    {
+        id: 'talkimage',
+        title: '【技育camp】マンスリーハッカソン-vol2\n努力賞受賞『Talk Image』',
+        tags: ["ReactNative"],
+        slides_num: 1,
+        links: {
+            github: "https://github.com/YuugouOhno/talkImage",
+        }
     },
 ];
 
