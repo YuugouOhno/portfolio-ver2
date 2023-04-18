@@ -10,7 +10,8 @@ const Project = () => {
     return (
         <section id="project" className="pt-20 w-screen flex flex-col justify-center items-center  text-black bg-white dark:text-white dark:bg-black">
             <h1>Project</h1>
-            <p>This is the Project page</p>
+            <p>今までに作ってきた作品たちです。クリックで詳細が確認できます。
+            </p>
             <div className="w-4/5 md:w-4/5">
                 <div className="grid gap-10 lg:gap-10 md:grid-cols-2 flex flex-col justify-center items-start">
                     {ProjectLists.map(project => (
@@ -18,7 +19,7 @@ const Project = () => {
                             <ProjectCard title={project.title}>
                                 <div className="w-full">
                                 <Image
-                                    src={project.image_path}
+                                    src={`/projects/${project.id}/thumbnail.png`}
                                     className="transition-all rounded-md"
                                     alt="project image"
                                     width="16000"
@@ -26,7 +27,7 @@ const Project = () => {
                                     layout="intrinsic"
                                 />
                                 </div>
-                                <Slide/>
+                                <Slide path={`/projects/${project.id}/slides/`} slides_num={project.slides_num} what_slides="project"/>
                             </ProjectCard>
                             <Tags tags={project.tags} />
                         </div>

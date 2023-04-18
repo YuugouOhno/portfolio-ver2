@@ -1,6 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -11,11 +10,14 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
-const Slide = () => {
-    const slides = ["/projects/1.png", "/projects/2.png", "/projects/3.png", "/projects/4.png", "/projects/5.png", "/projects/6.png", "/projects/7.png", "/projects/8.png"]
+const Slide = ({path, slides_num, what_slides}) => {
+    const slides = Array.from({ length: slides_num }, (_, i) => `${path}${i + 1}.png`);
+
     return (
         <>
             <Swiper
+                initialSlide={1}
+                loop={true}
                 cssMode={true}
                 navigation={true}
                 pagination={true}
@@ -28,7 +30,7 @@ const Slide = () => {
                     <SwiperSlide key={index} className="text-center flex justify-center items-center">
                         <div className="w-full h-full dark:bg-black bg-white text-center flex justify-center items-center">
                             <Image
-                                src={slide} 
+                                src={slide}
                                 className="transition-all rounded-md p-auto"
                                 alt="project image"
                                 width="16000"
@@ -38,6 +40,8 @@ const Slide = () => {
                         </div>
                     </SwiperSlide>
                 ))}
+                {what_slides=="project" && (<SwiperSlide>demo</SwiperSlide>)}
+                {what_slides=="project" && (<SwiperSlide>link</SwiperSlide>)}
                 <div className="swiper-scrollbar"></div>
             </Swiper>
         </>
