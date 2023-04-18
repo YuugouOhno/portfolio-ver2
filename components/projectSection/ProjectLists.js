@@ -4,54 +4,90 @@ const ProjectLists = [
         title: 'jugglink',
         tags: ["Laravel", "Vue"],
         slides_num: 6,
+        links: {
+            github: "https://github.com/YuugouOhno/Jugglink",
+            deploy: "",
+        }
     },
     {
         id: 'mikata',
         title: '小学生の味方',
         tags: ["Laravel", "JavqaScript"],
         slides_num: 9,
+        links: {
+            github: "https://github.com/YuugouOhno/Imposters",
+            deploy: "",
+        }
     },
     {
         id: 'arletter',
         title: 'ARチョコ',
-        image_path: '/projects/3.png',
         tags: ["Laravel", "react", "AR.js"],
         slides_num: 6,
+        links: {
+            github: "https://github.com/hiroki-yod/ar-choco",
+            deploy: "",
+        }
     },
     {
         id: 'portfolio1',
         title: 'portfolio-ver1',
-        image_path: '/projects/4.png',
         tags: ["JavaScript", "Three.js"],
-        slides_num: 6,
+        slides_num: 1,
+        links: {
+            github: "https://github.com/YuugouOhno/portfolio-ver1",
+            deploy: "",
+        }
     },
     {
         id: 'boidsmodel',
         title: '魚',
-        image_path: '/projects/5.png',
         tags: ["JavaScript", "Three.js"],
-        slides_num: 6,
+        slides_num: 1,
+        links: {
+            github: "https://github.com/YuugouOhno/threejs-boids",
+            deploy: "",
+        }
     },
     {
         id: 'namecard',
         title: '僕の考えた最強の名刺',
-        image_path: '/projects/name_caed.png',
         tags: ["JavaScript", "Three.js", "AR.js"],
-        slides_num: 6,
+        slides_num: 1,
+        links: {
+            github: "https://github.com/YuugouOhno/ar-name-card",
+            deploy: "",
+        }
     },
     {
         id: 'escape',
         title: 'モテ逃げボタン',
-        image_path: '/projects/7.png',
         tags: ["JavaScript"],
-        slides_num: 6,
+        slides_num: 1,
+        links: {
+            github: "https://github.com/YuugouOhno/escape-button",
+            deploy: "",
+        }
     },
     {
         id: 'portfolio2',
         title: 'portfolio-ver2',
-        image_path: '/projects/8.png',
         tags: ["Next.js","Three.js"],
-        slides_num: 6,
+        slides_num: 1,
+        links: {
+            github: "https://github.com/YuugouOhno/portfolio-ver2",
+            deploy: "",
+        }
+    },
+    {
+        id: 'talkimage',
+        title: 'Talk Image',
+        tags: ["ReactNative"],
+        slides_num: 1,
+        links: {
+            github: "https://github.com/YuugouOhno/talkImage",
+            deploy: "",
+        }
     },
 ];
 

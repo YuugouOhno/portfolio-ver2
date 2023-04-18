@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import LinkSlide from "@/components/projectSection/LinkSlide";
 
 // Import Swiper styles
 import "swiper/css";
@@ -40,7 +41,7 @@ const Slide = ({path, slides_num, what_slides}) => {
                     </SwiperSlide>
                 ))}
                 {what_slides=="project" && (<SwiperSlide>demo</SwiperSlide>)}
-                {what_slides=="project" && (<SwiperSlide>link</SwiperSlide>)}
+                {what_slides=="project" && (<SwiperSlide><LinkSlide src_path={`${path}bg.png`} /></SwiperSlide>)}
                 <div className="swiper-scrollbar"></div>
             </Swiper>
         </>
