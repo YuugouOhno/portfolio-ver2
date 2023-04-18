@@ -1,6 +1,6 @@
-const Game = () => {
+const Bey = () => {
     return (
-        <div id="game" className="h-screen w-screen flex flex-col justify-center items-center">
+        <div id="bey" className="h-screen w-screen flex flex-col justify-center items-center">
             <div className="mt-56">
                 <h1 className="text-8xl font-bold text-center my-4">
                     Bye
@@ -10,4 +10,4 @@ const Game = () => {
     )
 }
 
-export default Game;
+export default Bey;
