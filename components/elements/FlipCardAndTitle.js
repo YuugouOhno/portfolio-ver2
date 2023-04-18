@@ -2,7 +2,7 @@ import AnimatedComponent from '@/components/animation/AppearanceContainer';
 import { useState } from 'react';
 import { XMarkIcon } from '@heroicons/react/24/solid'
 
-const FlipCardAndTitle = ({ title, children }) => {
+const ProjectCard = ({ title, children }) => {
     const [isFlipped, setIsFlipped] = useState(false);
 
     const styles = {
@@ -107,4 +107,4 @@ const FlipCardAndTitle = ({ title, children }) => {
     );
 }
 
-export default FlipCardAndTitle
+export default ProjectCard

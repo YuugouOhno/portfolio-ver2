@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
-const Slide = ({path, slides_num, what_slides}) => {
+const Slide = ({path, slides_num, links}) => {
     const slides = Array.from({ length: slides_num }, (_, i) => `${path}${i + 1}.png`);
 
     return (
@@ -27,7 +27,7 @@ const Slide = ({path, slides_num, what_slides}) => {
                 className="h-full w-full text-center flex flex-col justify-center items-center"
             >
                 {slides.map((slide, index) => (
-                    <SwiperSlide key={index} className="text-center flex justify-center items-center">
+                    <SwiperSlide key={index} className="text-center flex justify-center items-center dark:bg-black bg-white">
                         <div className="lg:m-auto lg:w-4/5 h-full dark:bg-black bg-white text-center flex justify-center items-center">
                             <Image
                                 src={slide}
@@ -40,8 +40,8 @@ const Slide = ({path, slides_num, what_slides}) => {
                         </div>
                     </SwiperSlide>
                 ))}
-                {what_slides=="project" && (<SwiperSlide>demo</SwiperSlide>)}
-                {what_slides=="project" && (<SwiperSlide><LinkSlide src_path={`${path}bg.png`} /></SwiperSlide>)}
+                {links && (<SwiperSlide>demo</SwiperSlide>)}
+                {links && (<SwiperSlide><LinkSlide src_path={`${path}bg.png`} links={links}/></SwiperSlide>)}
                 <div className="swiper-scrollbar"></div>
             </Swiper>
         </>

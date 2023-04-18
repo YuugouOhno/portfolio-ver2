@@ -26,7 +26,7 @@ const Project = () => {
                                     layout="intrinsic"
                                 />
                                 </div>
-                                <Slide path={`/projects/${project.id}/`} slides_num={project.slides_num} what_slides="project"/>
+                                <Slide path={`/projects/${project.id}/`} slides_num={project.slides_num} links={project.links}/>
                             </FlipCardAndTitle>
                             <Tags tags={project.tags} />
                         </div>

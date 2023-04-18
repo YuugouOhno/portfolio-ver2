@@ -6,7 +6,7 @@ const ProjectLists = [
         slides_num: 6,
         links: {
             github: "https://github.com/YuugouOhno/Jugglink",
-            deploy: "",
+            deploy: "https://jugglink.herokuapp.com/",
         }
     },
     {
@@ -16,7 +16,7 @@ const ProjectLists = [
         slides_num: 9,
         links: {
             github: "https://github.com/YuugouOhno/Imposters",
-            deploy: "",
+            deploy: "https://imposters-t-test1.herokuapp.com/",
         }
     },
     {
@@ -26,7 +26,7 @@ const ProjectLists = [
         slides_num: 6,
         links: {
             github: "https://github.com/hiroki-yod/ar-choco",
-            deploy: "",
+            deploy: "https://ar-name-card.vercel.app/",
         }
     },
     {
@@ -36,7 +36,7 @@ const ProjectLists = [
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/portfolio-ver1",
-            deploy: "",
+            deploy: "https://yuugouohno-ver1.vercel.app/",
         }
     },
     {
@@ -46,17 +46,17 @@ const ProjectLists = [
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/threejs-boids",
-            deploy: "",
+            deploy: "https://threejs-boids.vercel.app/",
         }
     },
     {
         id: 'namecard',
-        title: '僕の考えた最強の名刺',
+        title: '【技育camp】マンスリーハッカソン-vol1\n努力賞受賞『僕の考えた最強の名刺』',
         tags: ["JavaScript", "Three.js", "AR.js"],
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/ar-name-card",
-            deploy: "",
+            deploy: "https://ar-name-card.vercel.app/",
         }
     },
     {
@@ -66,7 +66,8 @@ const ProjectLists = [
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/escape-button",
-            deploy: "",
+            store: "https://chrome.google.com/webstore/detail/%E3%83%A2%E3%83%86%E3%81%9F%E3%81%84%E3%81%91%E3%81%A9%E3%80%81%E9%80%83%E3%81%92%E3%82%89%E3%82%8C%E3%81%9F%E3%81%84%EF%BC%9F-%E3%81%9D%E3%82%93%E3%81%AA%E5%90%9B%E3%81%AB%E3%81%AF%E3%80%8C%E3%83%A2%E3%83%86%E9%80%83/kohcgdhioffjhcdadeimmnncdbpmljce?hl=ja",
+            topaz: "https://topaz.dev/projects/c47da0d3f3e021209efe",
         }
     },
     {
@@ -76,17 +77,16 @@ const ProjectLists = [
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/portfolio-ver2",
-            deploy: "",
+            deploy: "https://yuugouohno.vercel.app/",
         }
     },
     {
         id: 'talkimage',
-        title: 'Talk Image',
+        title: '【技育camp】マンスリーハッカソン-vol2\n努力賞受賞『Talk Image』',
         tags: ["ReactNative"],
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/talkImage",
-            deploy: "",
         }
     },
 ];
