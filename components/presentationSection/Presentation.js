@@ -16,7 +16,7 @@ const Presentation = () => {
                             <FlipCardAndTitle title={presentation.title}>
                                 <div className="w-full">
                                 <Image
-                                    src={`/presentations/${presentation.id}/slides/1.png`}
+                                    src={`/presentations/${presentation.id}/1.png`}
                                     className="transition-all rounded-md"
                                     alt="project image"
                                     width="16000"
@@ -24,7 +24,7 @@ const Presentation = () => {
                                     layout="intrinsic"
                                 />
                                 </div>
-                                <Slide path={`/presentations/${presentation.id}/slides/`} slides_num={presentation.slides_num} what_slides="presentation"/>
+                                <Slide path={`/presentations/${presentation.id}/`} slides_num={presentation.slides_num} what_slides="presentation"/>
                             </FlipCardAndTitle>
                         </div>
                     ))}
