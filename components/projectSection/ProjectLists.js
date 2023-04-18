@@ -9,7 +9,7 @@ const ProjectLists = [
         id: 'mikata',
         title: '小学生の味方',
         tags: ["Laravel", "JavqaScript"],
-        slides_num: 6,
+        slides_num: 9,
     },
     {
         id: 'arletter',
