@@ -16,7 +16,7 @@ const Slide = ({path, slides_num, what_slides}) => {
     return (
         <>
             <Swiper
-                initialSlide={1}
+                initialSlide={0}
                 loop={true}
                 cssMode={true}
                 navigation={true}

@@ -5,7 +5,6 @@ import Slide from "@/components/projectSection/Slide";
 
 
 const Presentation = () => {
-    console.log(PresentationLists)
     return (
         <section id="presentation" className="pt-20 w-screen flex flex-col justify-center items-center  text-black bg-white dark:text-white dark:bg-black">
             <h1>過去の登壇資料</h1>
@@ -17,7 +16,7 @@ const Presentation = () => {
                             <FlipCardAndTitle title={presentation.title}>
                                 <div className="w-full">
                                 <Image
-                                    src={`/presentations/${presentation.id}/thumbnail.png`}
+                                    src={`/presentations/${presentation.id}/slides/1.png`}
                                     className="transition-all rounded-md"
                                     alt="project image"
                                     width="16000"
