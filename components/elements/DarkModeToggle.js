@@ -3,7 +3,6 @@ import { useTheme } from 'next-themes';
 import { MoonIcon } from '@heroicons/react/24/solid'
 import { SunIcon } from '@heroicons/react/24/solid'
 
-
 const DarkModeToggle = () => {
   const { theme, setTheme } = useTheme();
 

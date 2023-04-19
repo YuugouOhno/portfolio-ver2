@@ -15,17 +15,18 @@ const SkillBar = ({ label, percentage, color = "bg-green-500" }) => {
             },
             { threshold: 0.1 }
         );
+        const bar = skillBarRef.current
 
-        if (skillBarRef.current) {
-            observer.observe(skillBarRef.current);
+        if (bar) {
+            observer.observe(bar);
         }
 
         return () => {
-            if (skillBarRef.current) {
-                observer.unobserve(skillBarRef.current);
+            if (bar) {
+                observer.unobserve(bar);
             }
         };
-    }, []);
+    }, [skillBarRef]);
 
     useEffect(() => {
         if (isVisible) {
