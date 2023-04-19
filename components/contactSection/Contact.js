@@ -20,16 +20,16 @@ const Contact = () => {
                                             <Image
                                                 src={account.src_dark}
                                                 alt={account.title}
-                                                width="250"
-                                                height="250"
+                                                width="100"
+                                                height="100"
                                                 layout="intrinsic"
                                             />
                                             :
                                             <Image
                                                 src={account.src_light}
                                                 alt={account.title}
-                                                width="250"
-                                                height="250"
+                                                width="100"
+                                                height="100"
                                                 layout="intrinsic"
                                             />
                                         }
