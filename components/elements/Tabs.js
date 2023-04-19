@@ -15,10 +15,10 @@ const Tabs = ({ keys, children }) => {
                             <li key={index} className="-mb-px mr-2 last:mr-0 flex-auto text-center">
                                 <Link
                                     className={
-                                        "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                                        "text-xs font-bold uppercase px-5 py-3 rounded block leading-normal shadow-lg dark:shadow dark:shadow-white" +
                                         (openTab === index
-                                            ? "text-white bg-purple-600"
-                                            : "text-purple-600 bg-white")
+                                            ? "text-white bg-purple-600 dark:shadow-white dark:shadow"
+                                            : "text-purple-600 bg-white dark:bg-black dark:shadow-white dark:shadow")
                                     }
                                     onClick={e => {
                                         e.preventDefault();
@@ -33,7 +33,7 @@ const Tabs = ({ keys, children }) => {
                             </li>
                         ))}
                     </ul>
-                    <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded">
+                    <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg dark:shadow-white rounded">
                         <div className="px-4 py-5 flex-auto">
                             <div className="tab-content tab-space">
                                 {children.map((child, index)=>(
