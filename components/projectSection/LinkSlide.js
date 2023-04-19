@@ -22,7 +22,7 @@ const LinkSlide = ({ src_path, links }) => {
             />
             <div class="flex justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 {Object.keys(links).map(key => (
-                    <Link href={links[key]} target="_blank">
+                    <Link key={key} href={links[key]} target="_blank">
                         <HoverCard>
                             <div className="flex flex-col w-1/2 h-1/2 text-center items-center justify-center">
                                 <Image
