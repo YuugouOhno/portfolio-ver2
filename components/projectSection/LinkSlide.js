@@ -21,9 +21,6 @@ const LinkSlide = ({ src_path, links }) => {
                 layout="intrinsic"
             />
             <div class="flex justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                {/* {links.map((key, value) => (
-                    <p>{key}:{value}</p>
-                ))} */}
                 {Object.keys(links).map(key => (
                     <Link href={links[key]} target="_blank">
                         <HoverCard>

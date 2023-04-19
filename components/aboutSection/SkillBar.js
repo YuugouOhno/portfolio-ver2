@@ -25,7 +25,7 @@ const SkillBar = ({ label, percentage, color = "bg-green-500" }) => {
                 observer.unobserve(skillBarRef.current);
             }
         };
-    }, []);
+    }, [skillBarRef]);
 
     useEffect(() => {
         if (isVisible) {

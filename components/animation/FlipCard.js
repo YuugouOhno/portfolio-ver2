@@ -8,7 +8,7 @@ const FlipCard = ({ value, whichFlippe, setWhichFlippe, children }) => {
         } else {
             setIsFlipped(false);
         }
-    });
+    }, [whichFlippe, value]);
 
     const styles = {
         flipCard: {
