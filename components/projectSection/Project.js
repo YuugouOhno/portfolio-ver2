@@ -14,7 +14,7 @@ const Project = () => {
             <div className="w-4/5 md:w-4/5">
                 <div className="grid gap-10 lg:gap-10 md:grid-cols-2 flex flex-col justify-center items-start">
                     {ProjectLists.map(project => (
-                        <div key={project.id} className="flex flex-col justify-center w-full">
+                        <div key={project.id} className="flex flex-col justify-center w-full shadow-lg dark:shadow dark:shadow-white rounded p-3">
                             <FlipCardAndTitle title={project.title}>
                                 <div className="w-full">
                                 <Image
