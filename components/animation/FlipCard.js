@@ -51,7 +51,7 @@ const FlipCard = ({ value, whichFlippe, setWhichFlippe, children }) => {
             transform: 'rotateY(180deg)',
             textAlign: 'center',
             backgroundColor: 'gray',
-            borderRadius: "0.375rem"
+            borderRadius: "0.375rem",	
         },
     }
 
