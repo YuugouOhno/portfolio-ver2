@@ -87,6 +87,9 @@ const Navbar = () => {
                         <li><Brackets isSelected={activeSection == 'contact' ? true : false}>
                             <Link href="#contact" className={activeSection == 'contact' ? 'text-purple-600 hover:text-purple-700' : ''}>Contact</Link>
                         </Brackets></li>
+                        <li><Brackets isSelected={activeSection == 'preesntation' ? true : false}>
+                            <Link href="#preesntation" className={activeSection == 'preesntation' ? 'text-purple-600 hover:text-purple-700' : ''}>Preesntation</Link>
+                        </Brackets></li>
 
                     </ul>
                 </div>
