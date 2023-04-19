@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
-const Slide = ({path, slides_num, links}) => {
+const Slide = ({path, slides_num, links, demo}) => {
     const slides = Array.from({ length: slides_num }, (_, i) => `${path}${i + 1}.png`);
 
     return (
@@ -40,7 +40,7 @@ const Slide = ({path, slides_num, links}) => {
                         </div>
                     </SwiperSlide>
                 ))}
-                {links && (<SwiperSlide>demo</SwiperSlide>)}
+                {demo && (<SwiperSlide>demo</SwiperSlide>)}
                 {links && (<SwiperSlide><LinkSlide src_path={`${path}bg.png`} links={links}/></SwiperSlide>)}
                 <div className="swiper-scrollbar"></div>
             </Swiper>
