@@ -21,9 +21,8 @@ const Project = () => {
                                     src={`/projects/${project.id}/1.png`}
                                     className="transition-all rounded-md"
                                     alt="project image"
-                                    width="16000"
-                                    height="9000"
-                                    layout="intrinsic"
+                                    width={16000}
+                                    height={9000}
                                 />
                                 </div>
                                 <Slide path={`/projects/${project.id}/`} slides_num={project.slides_num} links={project.links} demo={project.demo}/>

@@ -19,9 +19,8 @@ const Presentation = () => {
                                     src={`/presentations/${presentation.id}/1.png`}
                                     className="transition-all rounded-md"
                                     alt="project image"
-                                    width="16000"
-                                    height="9000"
-                                    layout="intrinsic"
+                                    width={16000}
+                                    height={9000}
                                 />
                                 </div>
                                 <Slide path={`/presentations/${presentation.id}/`} slides_num={presentation.slides_num} what_slides="presentation"/>
