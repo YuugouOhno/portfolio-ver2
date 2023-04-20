@@ -3,13 +3,7 @@ import Image from "next/legacy/image";
 const BackgroundImage = () => {
     const styles = {
         bgImage: {
-            position: "fixed",
             zIndex: "-2",
-            top: "0",
-            right: "0",
-            left: "0",
-            bottom: "0",
-            overflow: "hidden",
         },
 
     }
@@ -20,7 +14,9 @@ const BackgroundImage = () => {
                 className="z"
                 src="/bg/Ocean.jpg"
                 alt="background image"
-                layout="fill"
+                objectFit="cover"
+                layout='fill'
+                priority={true}
             />
         </div>
     )

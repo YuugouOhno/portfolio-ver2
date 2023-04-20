@@ -33,9 +33,8 @@ const Slide = ({path, slides_num, links, demo}) => {
                                 src={slide}
                                 className="transition-all rounded-md p-auto"
                                 alt="project image"
-                                width="16000"
-                                height="9000"
-                                layout="intrinsic"
+                                width={16000}
+                                height={9000}
                             />
                         </div>
                     </SwiperSlide>

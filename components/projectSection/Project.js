@@ -9,8 +9,8 @@ import Tags from "@/components/elements/Tags";
 const Project = () => {
     return (
         <section id="project" className="pt-20 w-screen flex flex-col justify-center items-center  text-black bg-white dark:text-white dark:bg-black">
-            <h1>Project</h1>
-            <p>今までに作ってきた作品たちです。クリックで詳細が確認できます。</p>
+            <h2 className="text-5xl font-bold text-center mb-5">Project</h2>
+            <p className="text-xl text-center mb-10">今までに作ってきた作品たちです。クリックで詳細が確認できます。</p>
             <div className="w-4/5 md:w-4/5">
                 <div className="grid gap-10 lg:gap-10 md:grid-cols-2 flex flex-col justify-center items-start">
                     {ProjectLists.map(project => (
@@ -21,9 +21,8 @@ const Project = () => {
                                     src={`/projects/${project.id}/1.png`}
                                     className="transition-all rounded-md"
                                     alt="project image"
-                                    width="16000"
-                                    height="9000"
-                                    layout="intrinsic"
+                                    width={16000}
+                                    height={9000}
                                 />
                                 </div>
                                 <Slide path={`/projects/${project.id}/`} slides_num={project.slides_num} links={project.links} demo={project.demo}/>

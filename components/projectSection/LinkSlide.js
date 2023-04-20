@@ -7,20 +7,16 @@ import { FaKey } from "react-icons/fa";
 
 
 const LinkSlide = ({ src_path, links }) => {
-    const github = links.github
-    const deploy = links.deploy
-    console.log(github, deploy)
     return (
         <div className="relative lg:m-auto lg:w-4/5 h-full dark:bg-black bg-white text-center flex justify-center items-center">
             <Image
                 src={src_path}
                 className="transition-all rounded-md p-auto"
                 alt="project image"
-                width="16000"
-                height="9000"
-                layout="intrinsic"
+                width={16000}
+                height={9000}
             />
-            <div class="flex justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <div className="flex justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 {Object.keys(links).map(key => (
                     <Link key={key} href={links[key]} target="_blank">
                         <HoverCard>
@@ -29,9 +25,8 @@ const LinkSlide = ({ src_path, links }) => {
                                     src={`/projects/icon/${key}.svg`}
                                     alt={`${key} logo`}
                                     className="color-black m-3"
-                                    width="200"
-                                    height="200"
-                                    layout="intrinsic"
+                                    width={200}
+                                    height={200}
                                 />
                                 <p>{key}</p>
                             </div>

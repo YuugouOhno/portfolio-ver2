@@ -49,9 +49,10 @@ const Navbar = () => {
                     <Image
                         src={theme=="dark" ? "/yuugouohno-white.png" : "/yuugouohno-black.png"}
                         alt="project image"
-                        width="120"
-                        height="60"
+                        width={120}
+                        height={60}
                         layout="fixed"
+                        priority={true}
                     />
                 </div>
                 <div className="flex md:hidden p-3">
