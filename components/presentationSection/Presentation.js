@@ -7,8 +7,8 @@ import Slide from "@/components/projectSection/Slide";
 const Presentation = () => {
     return (
         <section id="preesntation" className="pt-20 w-screen flex flex-col justify-center items-center  text-black bg-white dark:text-white dark:bg-black">
-            <h1>過去の登壇資料</h1>
-            <p>頑張って作ったのに発表して役目を終えているのがかわいそうなので載せておきます。見てね。</p>
+            <h2 className="text-5xl font-bold text-center mb-5">Presentation</h2>
+            <p className="text-xl font-bold text-center mb-10">頑張って作った過去の登壇資料<br/ >発表して役目を終えているのがかわいそうなので<br/ >載せておきます。見てね。</p>
             <div className="w-4/5 md:w-4/5">
                 <div className="grid gap-10 lg:gap-10 md:grid-cols-2 flex flex-col justify-center items-start">
                     {PresentationLists.map(presentation => (
