@@ -98,7 +98,7 @@ const Navbar = () => {
                     <DarkModeToggle />
                     <AddFish />
                     <LanguageToggle />
-                    <NowWeather />
+                    {/* <NowWeather /> */}
                 </div>
             </div>
         </nav >
