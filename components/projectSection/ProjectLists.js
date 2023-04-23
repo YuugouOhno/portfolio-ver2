@@ -2,7 +2,7 @@ const ProjectLists = [
     {
         id: 'jugglink',
         title: 'jugglink',
-        tags: ["Laravel", "Vue"],
+        tags: ["Laravel", "Vue","初めてのweb開発"],
         slides_num: 6,
         links: {
             github: "https://github.com/YuugouOhno/Jugglink",
@@ -12,7 +12,7 @@ const ProjectLists = [
     {
         id: 'mikata',
         title: '小学生の味方',
-        tags: ["Laravel", "JavqaScript"],
+        tags: ["Laravel", "JavqaScript","サポーターズハッカソン","受賞作品"],
         slides_num: 9,
         links: {
             github: "https://github.com/YuugouOhno/Imposters",
@@ -22,7 +22,7 @@ const ProjectLists = [
     {
         id: 'arletter',
         title: 'ARチョコ',
-        tags: ["Laravel", "react", "AR.js"],
+        tags: ["Laravel", "react", "AR.js","サポーターズハッカソン"],
         slides_num: 6,
         links: {
             github: "https://github.com/hiroki-yod/ar-choco",
@@ -32,7 +32,7 @@ const ProjectLists = [
     {
         id: 'portfolio1',
         title: 'portfolio-ver1',
-        tags: ["JavaScript", "Three.js"],
+        tags: ["JavaScript", "Three.js","初めてのポートフォリオ"],
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/portfolio-ver1",
@@ -42,7 +42,7 @@ const ProjectLists = [
     {
         id: 'boidsmodel',
         title: '魚',
-        tags: ["JavaScript", "Three.js"],
+        tags: ["JavaScript", "Three.js","魚"],
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/threejs-boids",
@@ -52,7 +52,7 @@ const ProjectLists = [
     {
         id: 'namecard',
         title: '【技育camp】マンスリーハッカソン-vol1\n努力賞受賞『僕の考えた最強の名刺』',
-        tags: ["JavaScript", "Three.js", "AR.js"],
+        tags: ["JavaScript", "Three.js", "AR.js","サポーターズハッカソン","受賞作品"],
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/ar-name-card",
@@ -62,7 +62,7 @@ const ProjectLists = [
     {
         id: 'escape',
         title: 'モテ逃げボタン',
-        tags: ["JavaScript"],
+        tags: ["JavaScript","ハックツハッカソン"],
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/escape-button",
@@ -83,7 +83,7 @@ const ProjectLists = [
     {
         id: 'talkimage',
         title: '【技育camp】マンスリーハッカソン-vol2\n努力賞受賞『Talk Image』',
-        tags: ["ReactNative"],
+        tags: ["ReactNative","サポーターズハッカソン","受賞作品"],
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/talkImage",
