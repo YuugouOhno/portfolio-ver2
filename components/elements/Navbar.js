@@ -3,7 +3,7 @@ import Image from "next/legacy/image";
 import DarkModeToggle from '@/components/elements/DarkModeToggle';
 import AddFish from '@/components/elements/AddFish';
 import LanguageToggle from '@/components/elements/LanguageToggle';
-import NowWeather from '@/components/elements/NowWeather';
+// import NowWeather from '@/components/elements/NowWeather';
 import Brackets from '@/components/elements/Brackets';
 import { FaHamburger } from "react-icons/fa";
 import { useState, useEffect } from 'react';
