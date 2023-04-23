@@ -25,8 +25,8 @@ export default function Index() {
       <Project />
       <Contact />
       <Bey />
-      <Presentation /> */}
-      {/* <ThreeCanvas />
+      <Presentation />
+      {/* <ThreeCanvas /> */}
     </div>
   )
 }
