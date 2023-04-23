@@ -14,7 +14,7 @@ const Contact = () => {
                     <div className="grid gap-10 lg:gap-10 grid-cols-2 md:grid-cols-4 ">
                         {AccountLists.map((account, index) => (
                             <div key={index}>
-                                <Link href={account.url} target="_blank">
+                                <Link href={account.url} target="_blank" as="image">
                                     <CardAndTitle title={account.title}>
                                         {theme === 'dark' ?
                                             <Image
