@@ -26,7 +26,7 @@ const Slide = ({path, slides_num, links, demo}) => {
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                 className="h-full w-full text-center flex flex-col justify-center items-center"
             >
-                {slides.length > 1 && slides.map((slide, index) => (
+                {slides.map((slide, index) => (
                     <SwiperSlide key={index} className="text-center flex justify-center items-center dark:bg-black bg-white">
                         <div className="lg:m-auto lg:w-4/5 h-full dark:bg-black bg-white text-center flex justify-center items-center">
                             <Image
