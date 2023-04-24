@@ -1,8 +1,12 @@
 import { FaFish } from "react-icons/fa";
+import { BoidsContext } from '@/contexts/BoidsContext';
+import { useContext } from 'react';
+
 
 const AddFish = () => {
+    const { boids, setBoids } = useContext(BoidsContext);
     const Add = () => {
-        console.log("AddFish")
+        setBoids([...boids, boids.length+1])
     }
     return (
         <button

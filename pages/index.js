@@ -7,7 +7,6 @@ import Project from '@/components/projectSection/Project';
 import Contact from '@/components/contactSection/Contact';
 import Bey from '@/components/Bey';
 import Presentation from '@/components/presentationSection/Presentation'
-// import Boids from "@/components/fish/Boids"
 
 export default function Index() {
   return (
@@ -19,7 +18,6 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      {/* <Boids /> */}
       <Home />
       <About />
       <Project />
