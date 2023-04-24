@@ -16,7 +16,6 @@ const ProjectLists = [
         slides_num: 9,
         links: {
             github: "https://github.com/YuugouOhno/Imposters",
-            deploy: "https://imposters-t-test1.herokuapp.com/",
         }
     },
     {
@@ -26,7 +25,6 @@ const ProjectLists = [
         slides_num: 6,
         links: {
             github: "https://github.com/hiroki-yod/ar-choco",
-            deploy: "https://ar-name-card.vercel.app/",
         }
     },
     {
