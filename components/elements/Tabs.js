@@ -17,8 +17,8 @@ const Tabs = ({ keys, children }) => {
                                     className={
                                         "text-xs font-bold uppercase px-5 py-3 rounded block leading-normal shadow-lg dark:shadow dark:shadow-white" +
                                         (openTab === index
-                                            ? "text-white bg-purple-600 dark:shadow-white dark:shadow"
-                                            : "text-purple-600 bg-white dark:bg-black dark:shadow-white dark:shadow")
+                                            ? "text-white bg-purple-400 dark:shadow-white dark:shadow"
+                                            : "text-purple-400 bg-white dark:bg-black dark:shadow-white dark:shadow")
                                     }
                                     onClick={e => {
                                         e.preventDefault();
