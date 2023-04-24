@@ -21,11 +21,11 @@ export default function Index() {
       <Navbar />
       {/* <Boids /> */}
       <Home />
-      <About />
-      {/* <Project />
+      {/* <About /> */}
+      <Project />
       <Contact />
       <Bey />
-      <Presentation /> */}
+      <Presentation />
     </div>
   )
 }
