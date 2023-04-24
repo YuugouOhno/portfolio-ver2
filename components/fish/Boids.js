@@ -140,8 +140,6 @@ const Boids = () => {
                             sceneRef={sceneRef}
                             key={index}
                             id={box}
-                            allv={allv}
-                            setAllv={setAllv}
                             position={[Math.random() * 10 - 5, Math.random() * 10 - 5, Math.random() * 10 - 5]}
                         />
                     ))}
