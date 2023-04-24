@@ -2,7 +2,20 @@ const ProjectLists = [
     {
         id: 'jugglink',
         title: 'jugglink',
-        tags: ["Laravel", "Vue","初めてのweb開発"],
+        tags: [
+            {
+                content: "Laravel",
+                color: "bg-pink-400",
+            },
+            {
+                content: "Vue",
+                color: "bg-pink-400",
+            },
+            {
+                content: "初めてのweb開発",
+                color: "bg-purple-400",
+            },
+        ],
         slides_num: 6,
         links: {
             github: "https://github.com/YuugouOhno/Jugglink",
@@ -12,7 +25,24 @@ const ProjectLists = [
     {
         id: 'mikata',
         title: '小学生の味方',
-        tags: ["Laravel", "JavqaScript","サポーターズハッカソン","受賞作品"],
+        tags: [
+            {
+                content: "Laravel",
+                color: "bg-pink-400",
+            },
+            {
+                content: "JavqaScript",
+                color: "bg-green-500",
+            },
+            {
+                content: "サポーターズハッカソン",
+                color: "bg-purple-400",
+            },
+            {
+                content: "受賞作品",
+                color: "bg-yellow-300",
+            },
+        ],
         slides_num: 9,
         links: {
             github: "https://github.com/YuugouOhno/Imposters",
@@ -21,7 +51,24 @@ const ProjectLists = [
     {
         id: 'arletter',
         title: 'ARチョコ',
-        tags: ["Laravel", "react", "AR.js","サポーターズハッカソン"],
+        tags: [
+            {
+                content: "Laravel",
+                color: "bg-pink-400",
+            },
+            {
+                content: "react",
+                color: "bg-pink-400",
+            },
+            {
+                content: "AR.js",
+                color: "bg-red-500",
+            },
+            {
+                content: "サポーターズハッカソン",
+                color: "bg-purple-400",
+            },
+        ],
         slides_num: 6,
         links: {
             github: "https://github.com/hiroki-yod/ar-choco",
@@ -30,7 +77,20 @@ const ProjectLists = [
     {
         id: 'portfolio1',
         title: 'portfolio-ver1',
-        tags: ["JavaScript", "Three.js","初めてのポートフォリオ"],
+        tags: [
+            {
+                content: "JavaScript",
+                color: "bg-green-500",
+            },
+            {
+                content: "Three.js",
+                color: "bg-red-500",
+            },
+            {
+                content: "初めてのポートフォリオ",
+                color: "bg-purple-400",
+            },
+        ],
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/portfolio-ver1",
@@ -40,7 +100,20 @@ const ProjectLists = [
     {
         id: 'boidsmodel',
         title: '魚',
-        tags: ["JavaScript", "Three.js","魚"],
+        tags: [
+            {
+                content: "JavaScript",
+                color: "bg-green-500",
+            },
+            {
+                content: "Three.js",
+                color: "bg-red-500",
+            },
+            {
+                content: "魚",
+                color: "bg-purple-400",
+            },
+        ],
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/threejs-boids",
@@ -50,7 +123,28 @@ const ProjectLists = [
     {
         id: 'namecard',
         title: '【技育camp】マンスリーハッカソン-vol1\n努力賞受賞『僕の考えた最強の名刺』',
-        tags: ["JavaScript", "Three.js", "AR.js","サポーターズハッカソン","受賞作品"],
+        tags: [
+            {
+                content: "JavaScript",
+                color: "bg-green-500",
+            },
+            {
+                content: "Three.js",
+                color: "bg-red-500",
+            },
+            {
+                content: "AR.js",
+                color: "bg-red-500",
+            },
+            {
+                content: "サポーターズハッカソン",
+                color: "bg-purple-400",
+            },
+            {
+                content: "受賞作品",
+                color: "bg-yellow-300",
+            },
+        ],
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/ar-name-card",
@@ -60,7 +154,16 @@ const ProjectLists = [
     {
         id: 'escape',
         title: 'モテ逃げボタン',
-        tags: ["JavaScript","ハックツハッカソン"],
+        tags: [
+            {
+                content: "JavaScript",
+                color: "bg-green-500",
+            },
+            {
+                content: "ハックツハッカソン",
+                color: "bg-purple-400",
+            },
+        ],
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/escape-button",
@@ -71,7 +174,16 @@ const ProjectLists = [
     {
         id: 'portfolio2',
         title: 'portfolio-ver2',
-        tags: ["Next.js","Three.js"],
+        tags: [
+            {
+                content: "Next.js",
+                color: "bg-pink-400",
+            },
+            {
+                content: "Three.js",
+                color: "bg-red-500",
+            },
+        ],
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/portfolio-ver2",
@@ -81,7 +193,20 @@ const ProjectLists = [
     {
         id: 'talkimage',
         title: '【技育camp】マンスリーハッカソン-vol2\n努力賞受賞『Talk Image』',
-        tags: ["ReactNative","サポーターズハッカソン","受賞作品"],
+        tags: [
+            {
+                content: "ReactNative",
+                color: "bg-green-500",
+            },
+            {
+                content: "サポーターズハッカソン",
+                color: "bg-purple-400",
+            },
+            {
+                content: "受賞作品",
+                color: "bg-yellow-300",
+            },
+        ],
         slides_num: 1,
         links: {
             github: "https://github.com/YuugouOhno/talkImage",

@@ -27,7 +27,12 @@ const Project = () => {
                                 </div>
                                 <Slide path={`/projects/${project.id}/`} slides_num={project.slides_num} links={project.links} demo={project.demo}/>
                             </FlipCardAndTitle>
-                            <Tags tags={project.tags} />
+                            <div className="px-10">
+                            {project.tags.map((tag, index)=>(
+                                <Tags key={index} tag={tag.content} color={tag.color} />
+                            ))}
+                            </div>
+                            
                         </div>
                     ))}
                 </div>

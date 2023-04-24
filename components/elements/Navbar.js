@@ -46,6 +46,7 @@ const Navbar = () => {
         <nav className={`fixed w-full z-20 top-0 left-0 transition-all duration-500 ease-in ${isAffix ? 'bg-white dark:bg-black p-0' : 'p-4 text-xl'}`}>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
                 <div className="hidden md:flex px-4 text-xl">
+                    <Link href="#">
                     {theme=="dark" && <Image
                         src="/yuugouohno-white.png"
                         alt="project image"
@@ -62,6 +63,7 @@ const Navbar = () => {
                         layout="fixed"
                         priority={true}
                     />}
+                    </Link>
                 </div>
                 <div className="flex md:hidden p-3">
                     <FaHamburger className="h-6 w-6" onClick={() => setIsOpen(!isOpen)} />
