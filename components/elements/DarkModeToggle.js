@@ -24,9 +24,9 @@ const DarkModeToggle = () => {
       {mounted && (
         <>
           {theme === 'dark' ? (
-            <MoonIcon />
-          ) : (
             <SunIcon />
+          ) : (
+            <MoonIcon />
           )}
         </>
       )}

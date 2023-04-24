@@ -24,8 +24,8 @@ export default function Index() {
       <About />
       <Project />
       <Contact />
-      <Bey />
       <Presentation />
+      <Bey />
     </div>
   )
 }
