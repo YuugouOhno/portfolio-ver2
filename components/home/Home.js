@@ -1,13 +1,13 @@
 import AnimatedComponent from '@/components/animation/AppearanceContainer';
 import BackgroundImage from "@/components/home/BackgroundImage";
-import Whale from "@/components/home/Whale"
+import ThreeCanvas from '@/components/three/ThreeCanvas';
 
 const Home = () => {
     return (
         <AnimatedComponent>
             <section id="home" className="pt-20 h-screen w-screen flex flex-col justify-center items-center">
-                <Whale />
                 <BackgroundImage />
+                <ThreeCanvas />
                 <div className="mt-56">
                     <h1 className="text-8xl font-bold text-center my-4 text-white">
                         Yuugou Ohno

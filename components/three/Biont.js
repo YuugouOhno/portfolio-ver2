@@ -41,7 +41,7 @@ const Biont = ({ id, sceneRef, position }) => {
             biont.position.distanceTo(this_biont.position) < separation_range
             // && isInTheFieldOfVision(this_biont.position, biont.position)
         ).map((biont) => {
-            const closeness = 1 / (Math.floor(biont.position.distanceTo(this_biont.position))**2 + 1);
+            const closeness = 1 / (Math.floor(biont.position.distanceTo(this_biont.position)) ** 2 + 1);
             separation_vector.add(this_biont.position.clone().sub(biont.position).multiplyScalar(closeness));
             separation_count += 1;
         })
