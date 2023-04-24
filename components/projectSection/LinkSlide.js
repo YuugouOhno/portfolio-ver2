@@ -16,9 +16,9 @@ const LinkSlide = ({ src_path, links }) => {
                 width={16000}
                 height={9000}
             />
-            <div className="flex justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <div className="flex justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
                 {Object.keys(links).map(key => (
-                    <Link key={key} href={links[key]} target="_blank" as="image">
+                    <Link key={key} href={links[key]} target="_blank">
                         <HoverCard>
                             <div className="flex flex-col w-1/2 h-1/2 text-center items-center justify-center">
                                 <Image
