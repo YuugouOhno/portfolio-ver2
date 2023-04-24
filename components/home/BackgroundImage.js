@@ -9,7 +9,7 @@ const BackgroundImage = () => {
     }
 
     return (
-        <div className="w-screen h-screen fixed top-0 left-0" style={styles.bgImage} as="image">
+        <div className="w-screen h-screen fixed top-0 left-0" style={styles.bgImage} >
             <Image
                 className="z"
                 src="/bg/Ocean.jpg"
