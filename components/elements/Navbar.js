@@ -46,14 +46,22 @@ const Navbar = () => {
         <nav className={`fixed w-full z-20 top-0 left-0 transition-all duration-500 ease-in ${isAffix ? 'bg-white dark:bg-black p-0' : 'p-4 text-xl'}`}>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
                 <div className="hidden md:flex px-4 text-xl">
-                    <Image
-                        src={theme=="dark" ? "/yuugouohno-white.png" : "/yuugouohno-black.png"}
+                    {theme=="dark" && <Image
+                        src="/yuugouohno-white.png"
                         alt="project image"
                         width={120}
                         height={60}
                         layout="fixed"
                         priority={true}
-                    />
+                    />}
+                    {theme=="light" && <Image
+                        src="/yuugouohno-black.png"
+                        alt="project image"
+                        width={120}
+                        height={60}
+                        layout="fixed"
+                        priority={true}
+                    />}
                 </div>
                 <div className="flex md:hidden p-3">
                     <FaHamburger className="h-6 w-6" onClick={() => setIsOpen(!isOpen)} />
