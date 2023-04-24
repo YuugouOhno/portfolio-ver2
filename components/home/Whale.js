@@ -2,6 +2,7 @@ import { useEffect, useRef, Suspense } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Html, useProgress, useGLTF, useAnimations, OrbitControls } from '@react-three/drei'
 import Typography from '@mui/material/Typography'
+import Boids from "@/components/fish/Boids"
 
 const ModelPath = '/models/whale1.glb'
 
@@ -76,6 +77,7 @@ const Whale = () => {
                 <Suspense fallback={<Loader />}>
                     <Model position={[0, 0, 0]} rotation={[0, 0, 0]} scale={0.6} />
                 </Suspense>
+                <Boids />
             </Canvas>
         </div>
     )

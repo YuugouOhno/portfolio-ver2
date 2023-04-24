@@ -7,7 +7,6 @@ import Project from '@/components/projectSection/Project';
 import Contact from '@/components/contactSection/Contact';
 import Bey from '@/components/Bey';
 import Presentation from '@/components/presentationSection/Presentation'
-import Boids from "@/components/fish/Boids"
 
 export default function Index() {
   return (
@@ -18,14 +17,13 @@ export default function Index() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Navbar /> */}
-      <Boids />
-      {/* <Home />
+      <Navbar />
+      <Home />
       <About />
       <Project />
       <Contact />
       <Bey />
-      <Presentation /> */}
+      <Presentation />
     </div>
   )
 }
