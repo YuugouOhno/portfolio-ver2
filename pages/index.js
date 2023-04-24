@@ -5,7 +5,7 @@ import Home from '@/components/home/Home';
 import About from '@/components/aboutSection/About';
 import Project from '@/components/projectSection/Project';
 import Contact from '@/components/contactSection/Contact';
-import Bey from '@/components/Bey';
+import Bye from '@/components/Bye';
 import Presentation from '@/components/presentationSection/Presentation'
 
 export default function Index() {
@@ -22,7 +22,7 @@ export default function Index() {
       <About />
       <Project />
       <Contact />
-      <Bey />
+      <Bye />
       <Presentation />
     </div>
   )
