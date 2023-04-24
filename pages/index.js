@@ -21,7 +21,7 @@ export default function Index() {
       <Navbar />
       {/* <Boids /> */}
       <Home />
-      {/* <About /> */}
+      <About />
       <Project />
       <Contact />
       <Bey />
