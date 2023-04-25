@@ -5,9 +5,12 @@ import Home from '@/components/home/Home';
 import About from '@/components/aboutSection/About';
 import Project from '@/components/projectSection/Project';
 import Contact from '@/components/contactSection/Contact';
-import Bey from '@/components/Bey';
+import Bye from '@/components/Bye';
 import Presentation from '@/components/presentationSection/Presentation'
-// import Boids from "@/components/fish/Boids"
+
+import BackgroundImage from "@/components/home/BackgroundImage";
+import BackCanvas from '@/components/three/BackCanvas';
+import FrontCanvas from '@/components/three/FrontCanvas';
 
 export default function Index() {
   return (
@@ -19,12 +22,14 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      {/* <Boids /> */}
+      <BackgroundImage />
+      <BackCanvas />
+      <FrontCanvas />
       <Home />
       <About />
       <Project />
       <Contact />
-      <Bey />
+      <Bye />
       <Presentation />
     </div>
   )

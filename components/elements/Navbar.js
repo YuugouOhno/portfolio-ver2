@@ -43,9 +43,10 @@ const Navbar = () => {
     }, [activeSection]);
 
     return (
-        <nav className={`fixed w-full z-20 top-0 left-0 transition-all duration-500 ease-in ${isAffix ? 'bg-white dark:bg-black p-0' : 'p-4 text-xl'}`}>
+        <nav className={`z-50 fixed w-full top-0 left-0 transition-all duration-500 ease-in ${isAffix ? 'bg-gray-300 dark:bg-gray-700 p-0' : 'p-4 text-xl'}`}>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
                 <div className="hidden md:flex px-4 text-xl">
+                    <Link href="#">
                     {theme=="dark" && <Image
                         src="/yuugouohno-white.png"
                         alt="project image"
@@ -62,6 +63,7 @@ const Navbar = () => {
                         layout="fixed"
                         priority={true}
                     />}
+                    </Link>
                 </div>
                 <div className="flex md:hidden p-3">
                     <FaHamburger className="h-6 w-6" onClick={() => setIsOpen(!isOpen)} />
@@ -105,7 +107,7 @@ const Navbar = () => {
                 <div className="flex">
                     <DarkModeToggle />
                     <AddFish />
-                    <LanguageToggle />
+                    {/* <LanguageToggle /> */}
                     <NowWeather />
                 </div>
             </div>

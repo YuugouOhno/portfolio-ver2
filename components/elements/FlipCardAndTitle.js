@@ -73,7 +73,7 @@ const ProjectCard = ({ title, children }) => {
     return (
         <AnimatedComponent>
             <div className="cursor-pointer group flex flex-col justify-center items-center">
-                {isFlipped ? <div className="fixed top-0 left-0 w-full h-full z-10 bg-black bg-opacity-70 dark:bg-white dark:bg-opacity-70" onClick={flipCard}></div> : ""}
+                {isFlipped ? <div className="fixed top-0 left-0 w-full h-full z-50 bg-black bg-opacity-70 dark:bg-white dark:bg-opacity-70" onClick={flipCard}></div> : ""}
                 <div style={isFlipped ? styles.flippedCard : styles.flipCard}>
                     <div style={isFlipped ? styles.flippedCardInner : styles.flipCardInner} >
                         <div style={styles.flipCardFront} onClick={flipCard}>

@@ -7,14 +7,14 @@ import CardAndTitle from "@/components/animation/CardAndTitle";
 const Contact = () => {
     const { theme } = useTheme();
     return (
-        <section id="contact" className="h-screen w-screen flex flex-col justify-center items-center text-black bg-white dark:text-white dark:bg-black z-10">
+        <section id="contact" className="h-screen w-screen flex flex-col justify-center items-center text-black bg-white dark:text-white dark:bg-black z-30 relative">
             <h2 className="text-5xl font-bold text-center mb-5">Contact</h2>
             <div className="flex">
                 <div className="container px-8 py-5 lg:py-8 mx-auto xl:px-5 max-w-screen-lg">
                     <div className="grid gap-10 lg:gap-10 grid-cols-2 md:grid-cols-4 ">
                         {AccountLists.map((account, index) => (
                             <div key={index}>
-                                <Link href={account.url} target="_blank" as="image">
+                                <Link href={account.url} target="_blank">
                                     <CardAndTitle title={account.title}>
                                         {theme === 'dark' ?
                                             <Image

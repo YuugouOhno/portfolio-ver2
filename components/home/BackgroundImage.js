@@ -3,7 +3,7 @@ import Image from "next/legacy/image";
 const BackgroundImage = () => {
     const styles = {
         bgImage: {
-            zIndex: "-2",
+            zIndex: "0",
         },
 
     }
