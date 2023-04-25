@@ -6,12 +6,16 @@ import LanguageToggle from '@/components/elements/LanguageToggle';
 import NowWeather from '@/components/elements/NowWeather';
 import Brackets from '@/components/elements/Brackets';
 import { FaHamburger } from "react-icons/fa";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useTheme } from 'next-themes';
+
+import { BoidsContext } from '@/contexts/BoidsContext';
 
 import { Link as Scroll } from 'react-scroll';
 
 const Navbar = () => {
+    const { isEndOfPage, setIsEndOfPage } = useContext(BoidsContext);
+
     const [isOpen, setIsOpen] = useState(false);
     const [isAffix, setIsAffix] = useState(false);
     const [activeSection, setActiveSection] = useState("");
@@ -27,6 +31,10 @@ const Navbar = () => {
                 const sectionHeight = section.offsetHeight;
                 if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                     setActiveSection(section.id)
+                    setIsEndOfPage(false)
+                    if (section.id == "game" && sectionTop + sectionHeight >= scrollPosition) {
+                        setIsEndOfPage(true)
+                    }
                 }
             });
             // 最初のふわっとするやつ
