@@ -97,7 +97,7 @@ const Biont = ({ id, sceneRef, position, gltf, mode }) => {
 
     // 進行方向を向く
     const setFaceDirection = () => {
-        this_biont.lookAt(v);
+        this_biont.lookAt(this_biont.position.clone().add(v));
     }
 
     // 行動範囲の制限
