@@ -4,6 +4,7 @@ import { OrbitControls } from '@react-three/drei'
 
 import Whale from "@/components/three/Whale"
 import Boids from "@/components/three/Boids"
+import Model from "@/components/three/Model"
 
 const ThreeCanvas = () => {
     const styles = {
@@ -23,6 +24,9 @@ const ThreeCanvas = () => {
             height: "100%",
         }
     }
+
+    const modelUrl = './models/tuna.glb';
+
     return (
         <div style={styles.canvasArea}>
             <Canvas style={styles.canvas}>
@@ -32,8 +36,10 @@ const ThreeCanvas = () => {
                 <spotLight position={[0, 10, 0]} angle={1} penumbra={1} />
                 <pointLight position={[0, 10, 0]} />
 
-                <Whale />
+                {/* <Whale /> */}
                 <Boids />
+                <Model url={modelUrl} position={[0, 0, 0]} id={1}/>
+                <Model url={modelUrl} position={[2, 0, 0]} id={2}/>
             </Canvas>
         </div>
     )
