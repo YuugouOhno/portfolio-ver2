@@ -8,9 +8,8 @@ import Biont from "@/components/three/Biont"
 const Boids = () => {
     const { boids, setBoids } = useContext(BoidsContext);
     const sceneRef = useRef();
-    // const boids = Array.from({ length: 400 }, (_, index) => index + 1);
     
-    const count = 5
+    const count = boids.length
     const gltf = useGLTF('./models/tuna.glb')
 
     const gltfs = useMemo(() => {
@@ -30,6 +29,7 @@ const Boids = () => {
                     id={biont}
                     position={[Math.random() * 10 - 5, Math.random() * 10 - 5, Math.random() * 10 - 5]}
                     gltf={gltfs[index]}
+                    mode="fish"
                 />
             ))}
         </scene>

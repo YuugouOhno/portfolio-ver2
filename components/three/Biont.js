@@ -5,7 +5,7 @@ import { Vector3 } from 'three';
 import Fish from "@/components/three/Fish"
 
 
-const Biont = ({ id, sceneRef, position, gltf }) => {
+const Biont = ({ id, sceneRef, position, gltf, mode }) => {
     const weight_to_separation = 1
     const weight_to_alignment = 0.001
     const weight_to_cohesion = 0.001
@@ -124,25 +124,27 @@ const Biont = ({ id, sceneRef, position, gltf }) => {
     }
 
     useEffect(() => {
-        // sceneRef.current.traverse((obj) => {
-        //     if (obj.type === "Mesh" && obj.geometry.type === "BoxGeometry" && obj.name != id) {
-        //         boids.push(obj)
-        //     }
-        //     if (obj.type === "Mesh" && obj.geometry.type === "BoxGeometry" && obj.name == id) {
-        //         this_biont = obj
-        //         this_biont.position.set(...position)
-        //     }
-        // })
-        sceneRef.current.traverse((obj) => {
-            if (obj.type === "Group" && typeof obj.name === "number" && obj.name != id) {
-                boids.push(obj)
-            }
-            if (obj.type === "Group" && typeof obj.name === "number" && obj.name == id) {
-                this_biont = obj
-                this_biont.position.set(...position)
-            }
-        })
-        console.log(boids,this_biont)
+        if (mode == "box") {
+            sceneRef.current.traverse((obj) => {
+                if (obj.type === "Mesh" && obj.geometry.type === "BoxGeometry" && obj.name != id) {
+                    boids.push(obj)
+                }
+                if (obj.type === "Mesh" && obj.geometry.type === "BoxGeometry" && obj.name == id) {
+                    this_biont = obj
+                    this_biont.position.set(...position)
+                }
+            })
+        } else if (mode == "fish") {
+            sceneRef.current.traverse((obj) => {
+                if (obj.type === "Group" && typeof obj.name === "number" && obj.name != id) {
+                    boids.push(obj)
+                }
+                if (obj.type === "Group" && typeof obj.name === "number" && obj.name == id) {
+                    this_biont = obj
+                    this_biont.position.set(...position)
+                }
+            })
+        }
     })
 
     useFrame(() => {
@@ -157,12 +159,19 @@ const Biont = ({ id, sceneRef, position, gltf }) => {
     })
 
     return (
-        // <mesh position={position} name={id}>
-        //     <boxGeometry attach="geometry" args={[1, 1, 1]} />
-        //     <meshStandardMaterial attach="material" color="hotpink" /> 
-        // </mesh>
+
+
         <>
-            <Fish gltf={gltf} id={id} position={position} />
+            {mode == "box" && (
+                <mesh position={position} name={id}>
+                    <boxGeometry attach="geometry" args={[1, 1, 1]} />
+                    <meshStandardMaterial attach="material" color="hotpink" />
+                </mesh>
+            )}
+            {mode == "fish" && (
+                <Fish gltf={gltf} id={id} position={position} />
+            )}
+
         </>
     )
 }
