@@ -31,7 +31,7 @@ const ProjectLists = [
                 color: "bg-pink-400",
             },
             {
-                content: "JavqaScript",
+                content: "JavaScript",
                 color: "bg-green-500",
             },
             {

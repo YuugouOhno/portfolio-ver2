@@ -17,7 +17,7 @@ const NowWeather = () => {
     }, [locate])
 
     return (
-        <div className="p-3 h-12 w-20 order-5">
+        <div className="p-3 h-12 w-20 order-2">
             {weather}
         </div>
     )
