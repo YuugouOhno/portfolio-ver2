@@ -4,7 +4,7 @@ import { OrbitControls } from '@react-three/drei'
 
 import Whale from "@/components/three/Whale"
 import Boids from "@/components/three/Boids"
-import Model from "@/components/three/Model"
+import Model from "@/components/three/Fish"
 
 const ThreeCanvas = () => {
     const styles = {
@@ -38,8 +38,7 @@ const ThreeCanvas = () => {
 
                 {/* <Whale /> */}
                 <Boids />
-                <Model url={modelUrl} position={[0, 0, 0]} id={1}/>
-                <Model url={modelUrl} position={[2, 0, 0]} id={2}/>
+                {/* <Model url={modelUrl} position={[2, 0, 0]} id={2}/> */}
             </Canvas>
         </div>
     )

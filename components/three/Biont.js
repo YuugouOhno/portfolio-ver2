@@ -1,8 +1,11 @@
-import { useEffect } from 'react';
+import { Children, useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Vector3 } from 'three';
 
-const Biont = ({ id, sceneRef, position }) => {
+import Fish from "@/components/three/Fish"
+
+
+const Biont = ({ id, sceneRef, position, gltf }) => {
     const weight_to_separation = 1
     const weight_to_alignment = 0.001
     const weight_to_cohesion = 0.001
@@ -132,22 +135,25 @@ const Biont = ({ id, sceneRef, position }) => {
         })
     })
 
-    useFrame(() => {
-        setInitial()
-        getSeparation()
-        getAlignment()
-        getCohesion()
-        setActionRange()
-        update()
-        setFaceDirection()
-        this_biont.position.add(v)
-    })
+    // useFrame(() => {
+    //     setInitial()
+    //     getSeparation()
+    //     getAlignment()
+    //     getCohesion()
+    //     setActionRange()
+    //     update()
+    //     setFaceDirection()
+    //     this_biont.position.add(v)
+    // })
 
     return (
-        <mesh position={position} name={id}>
-            <boxGeometry attach="geometry" args={[1, 1, 1]} />
-            <meshStandardMaterial attach="material" color="hotpink" />
-        </mesh>
+        // <mesh position={position} name={id}>
+        //     <boxGeometry attach="geometry" args={[1, 1, 1]} />
+        //     <meshStandardMaterial attach="material" color="hotpink" /> 
+        // </mesh>
+        <>
+            <Fish gltf={gltf} index={id} position={position} />
+        </>
     )
 }
 
