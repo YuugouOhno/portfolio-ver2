@@ -6,13 +6,14 @@ import Boids from "@/components/three/Boids"
 
 const BackCanvas = () => {
     return (
-        <div className="fixed z-20 top-0 right-0 left-0 bottom-0 overflow-hidden pointer-events-none">
+        <div className="fixed z-20 top-0 right-0 left-0 bottom-0 overflow-hidden">
             <Canvas className="w-full h-full">
                 <OrbitControls />
                 <ambientLight intensity={0.5} />
                 <spotLight position={[0, 10, 0]} angle={1} penumbra={1} />
                 <pointLight position={[0, 10, 0]} />
                 <Whale />
+                <Boids/>
             </Canvas>
         </div>
     )

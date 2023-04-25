@@ -1,5 +1,9 @@
 import Head from 'next/head';
 
+import BackgroundImage from "@/components/home/BackgroundImage";
+import BackCanvas from '@/components/three/BackCanvas';
+import FrontCanvas from '@/components/three/FrontCanvas';
+
 import Navbar from '@/components/elements/Navbar';
 import Home from '@/components/home/Home';
 import About from '@/components/aboutSection/About';
@@ -7,10 +11,8 @@ import Project from '@/components/projectSection/Project';
 import Contact from '@/components/contactSection/Contact';
 import Bye from '@/components/Bye';
 import Presentation from '@/components/presentationSection/Presentation'
+import Game from '@/components/gameSection/Game'
 
-import BackgroundImage from "@/components/home/BackgroundImage";
-import BackCanvas from '@/components/three/BackCanvas';
-import FrontCanvas from '@/components/three/FrontCanvas';
 
 export default function Index() {
   return (
@@ -24,13 +26,14 @@ export default function Index() {
       <Navbar />
       <BackgroundImage />
       <BackCanvas />
-      <FrontCanvas />
+      {/* <FrontCanvas /> */}
       <Home />
       <About />
       <Project />
       <Contact />
       <Bye />
       <Presentation />
+      <Game />
     </div>
   )
 }
