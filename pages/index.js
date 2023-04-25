@@ -8,6 +8,10 @@ import Contact from '@/components/contactSection/Contact';
 import Bye from '@/components/Bye';
 import Presentation from '@/components/presentationSection/Presentation'
 
+import BackgroundImage from "@/components/home/BackgroundImage";
+import BackCanvas from '@/components/three/BackCanvas';
+import FrontCanvas from '@/components/three/FrontCanvas';
+
 export default function Index() {
   return (
     <div>
@@ -18,6 +22,9 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <BackgroundImage />
+      <BackCanvas />
+      <FrontCanvas />
       <Home />
       <About />
       <Project />
