@@ -21,8 +21,6 @@ const Boids = () => {
         }
     }, [gltf, count]);
 
-    console.log(gltfs)
-
     return (
         <scene ref={sceneRef}>
             {boids.map((biont, index) => (

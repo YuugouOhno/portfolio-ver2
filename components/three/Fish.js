@@ -1,6 +1,6 @@
-const Fish = ({ gltf, index, position }) => {
+const Fish = ({ gltf, id, position }) => {
     return (
-        <group key={index}>
+        <group name={id}>
             <primitive object={gltf} position={position} />
         </group>
     )

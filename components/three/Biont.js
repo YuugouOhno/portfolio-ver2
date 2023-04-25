@@ -124,27 +124,37 @@ const Biont = ({ id, sceneRef, position, gltf }) => {
     }
 
     useEffect(() => {
+        // sceneRef.current.traverse((obj) => {
+        //     if (obj.type === "Mesh" && obj.geometry.type === "BoxGeometry" && obj.name != id) {
+        //         boids.push(obj)
+        //     }
+        //     if (obj.type === "Mesh" && obj.geometry.type === "BoxGeometry" && obj.name == id) {
+        //         this_biont = obj
+        //         this_biont.position.set(...position)
+        //     }
+        // })
         sceneRef.current.traverse((obj) => {
-            if (obj.type === "Mesh" && obj.geometry.type === "BoxGeometry" && obj.name != id) {
+            if (obj.type === "Group" && typeof obj.name === "number" && obj.name != id) {
                 boids.push(obj)
             }
-            if (obj.type === "Mesh" && obj.geometry.type === "BoxGeometry" && obj.name == id) {
+            if (obj.type === "Group" && typeof obj.name === "number" && obj.name == id) {
                 this_biont = obj
                 this_biont.position.set(...position)
             }
         })
+        console.log(boids,this_biont)
     })
 
-    // useFrame(() => {
-    //     setInitial()
-    //     getSeparation()
-    //     getAlignment()
-    //     getCohesion()
-    //     setActionRange()
-    //     update()
-    //     setFaceDirection()
-    //     this_biont.position.add(v)
-    // })
+    useFrame(() => {
+        setInitial()
+        getSeparation()
+        getAlignment()
+        getCohesion()
+        setActionRange()
+        update()
+        setFaceDirection()
+        this_biont.position.add(v)
+    })
 
     return (
         // <mesh position={position} name={id}>
@@ -152,7 +162,7 @@ const Biont = ({ id, sceneRef, position, gltf }) => {
         //     <meshStandardMaterial attach="material" color="hotpink" /> 
         // </mesh>
         <>
-            <Fish gltf={gltf} index={id} position={position} />
+            <Fish gltf={gltf} id={id} position={position} />
         </>
     )
 }
