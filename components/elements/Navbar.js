@@ -107,7 +107,7 @@ const Navbar = () => {
                 <div className="flex">
                     <DarkModeToggle />
                     <AddFish />
-                    <LanguageToggle />
+                    {/* <LanguageToggle /> */}
                     <NowWeather />
                 </div>
             </div>
