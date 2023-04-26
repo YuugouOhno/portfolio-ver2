@@ -7,7 +7,7 @@ const Box = ({position, id}) => {
     return (
         <mesh position={position} name={id}>
             <boxGeometry attach="geometry" args={[params.boxScaleX, params.boxScaleY, params.boxScaleZ]}/>
-            <meshStandardMaterial attach="material" color="hotpink"/>
+            <meshStandardMaterial attach="material" color={params.boxColor} />
         </mesh>
     )
 }

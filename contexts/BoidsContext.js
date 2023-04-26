@@ -7,7 +7,7 @@ function BoidsContextProvider({ children }) {
     const [isEndOfPage, setIsEndOfPage] = useState(false);
     const [showBoids, setShowBoids] = useState(false);
     const [showControl, setShowControl] = useState(false)
-    const [params, setParams] = useState({objectType:"fish",whaleScale:1,fishScale:1,boxScaleX:1,boxScaleY:1,boxScaleZ:1})
+    const [params, setParams] = useState({objectType:"fish",whaleScale:1,fishScale:1,boxScaleX:1,boxScaleY:1,boxScaleZ:1,boxColor:"#ffffff"})
 
     return (
         <BoidsContext.Provider value={{ boids, setBoids, isEndOfPage, setIsEndOfPage, showBoids, setShowBoids, showControl, setShowControl, params, setParams }}>

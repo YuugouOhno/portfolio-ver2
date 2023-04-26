@@ -81,6 +81,15 @@ const Control = () => {
                     value={params.boxScaleZ}
                 />
             </div>
+            <div className="flex">
+                <label>Box Color</label>
+                <input
+                    className="w-10"
+                    type="color"
+                    onChange={(event) => setParams({ ...params, boxColor: event.target.value })}
+                    value={params.boxColor}
+                />
+            </div>
         </div>
     )
 }
