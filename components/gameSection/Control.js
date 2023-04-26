@@ -32,10 +32,55 @@ const Control = () => {
             </div>
             <div className="flex">
                 <button onClick={() => addFish(addRedNum)} >addition</button>
-                <input className="w-3" type="number" onChange={(e) => setAddRedNum(e.target.value)} value={addRedNum}></input>
+                <input
+                    className="w-10"
+                    type="number"
+                    onChange={(e) => setAddRedNum(e.target.value)}
+                    value={addRedNum} />
                 <button onClick={() => redFish(addRedNum)} >reduction</button>
             </div>
-            <div><label>Whale Scale</label><input type="number" onChange={(event) => setParams({ ...params, whaleScale: event.target.value })}></input></div>
+            <div className="flex">
+                <label>Whale Scale</label>
+                <input
+                    className="w-10"
+                    type="number"
+                    onChange={(event) => setParams({ ...params, whaleScale: event.target.value })}
+                    value={params.whaleScale}
+                />
+            </div>
+            <div className="flex">
+                <label>Fish Scale</label>
+                <input
+                    className="w-10"
+                    type="number"
+                    onChange={(event) => setParams({ ...params, fishScale: event.target.value })}
+                    value={params.fishScale}
+                />
+            </div>
+            <div className="flex">
+                <label>Box Scale</label>
+                <label>X</label>
+                <input
+                    className="w-10"
+                    type="number"
+                    onChange={(event) => setParams({ ...params, boxScaleX: event.target.value })}
+                    value={params.boxScaleX}
+                />
+                <label>Y</label>
+                <input
+                    className="w-10"
+                    type="number"
+                    onChange={(event) => setParams({ ...params, boxScaleY: event.target.value })}
+                    value={params.boxScaleY}
+                />
+                <label>Z</label>
+                <input
+                    className="w-10"
+                    type="number"
+                    onChange={(event) => setParams({ ...params, boxScaleZ: event.target.value })}
+                    value={params.boxScaleZ}
+                />
+            </div>
         </div>
     )
 }

@@ -1,8 +1,9 @@
-import { Children, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Vector3 } from 'three';
 
 import Fish from "@/components/three/Fish"
+import Box from "@/components/three/Box"
 
 
 const Biont = ({ id, sceneRef, position, gltf, mode }) => {
@@ -163,10 +164,7 @@ const Biont = ({ id, sceneRef, position, gltf, mode }) => {
 
         <>
             {mode == "box" && (
-                <mesh position={position} name={id}>
-                    <boxGeometry attach="geometry" args={[1, 1, 1]} />
-                    <meshStandardMaterial attach="material" color="hotpink" />
-                </mesh>
+                <Box position={position} id={id} />
             )}
             {mode == "fish" && (
                 <Fish gltf={gltf} id={id} position={position} />
