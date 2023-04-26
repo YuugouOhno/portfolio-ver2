@@ -4,11 +4,14 @@ import { BoidsContext } from '@/contexts/BoidsContext';
 
 
 const AddFish = () => {
-    const { boids, setBoids, isEndOfPage, showBoids, setShowBoids } = useContext(BoidsContext);
+    const { boids, setBoids, isEndOfPage, showBoids, setShowBoids, showControl, setShowControl } = useContext(BoidsContext);
     const [rect, setRect] = useState()
     const Add = () => {
         setBoids([...boids, boids.length + 1])
         setShowBoids(true)
+        if (isEndOfPage) {
+            setShowControl(true)
+        }
     }
     const stalkerRef = useRef();
 
@@ -26,8 +29,8 @@ const AddFish = () => {
             setRect(stalkerRef.current.getBoundingClientRect())
         }
         if (isEndOfPage) {
+            setShowControl(false)
             const handleMouseMove = (e) => {
-                console.log(rect)
                 stalkerRef.current.style.top = `${rect.top}px)`;
                 stalkerRef.current.style.left = `${rect.left}px`;
                 stalkerRef.current.style.position = "fixed"
@@ -47,7 +50,6 @@ const AddFish = () => {
         transition: 'transform 0.2s',
         transitionTimingFunction: 'ease-out',
         zIndex: '999',
-        backgroundColor: 'rgba(55, 65, 81)',
         borderRadius: '50%'
     }
 
@@ -60,7 +62,7 @@ const AddFish = () => {
                         ref={stalkerRef}
                         aria- label="add fish"
                         type="button"
-                        className="p-3 h-12 w-12 order-5"
+                        className={`m-1 p-3 h-12 w-12 order-5 bg-gray-300 dark:bg-gray-700 ${showControl?"hidden":""}`}
                         onClick={() => Add()}
                     >
                         <FaFish className="h-6 w-6" />
@@ -69,7 +71,7 @@ const AddFish = () => {
                         ref={stalkerRef}
                         aria-label="add fish"
                         type="button"
-                        className="p-3 h-12 w-12 order-5"
+                        className="m-1 p-3 h-12 w-12 order-5 bg-gray-300 dark:bg-gray-700 rounded-full"
                         onClick={() => Add()}
                     >
                         <FaFish className="h-6 w-6" />

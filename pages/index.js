@@ -12,7 +12,7 @@ import Contact from '@/components/contactSection/Contact';
 import Bye from '@/components/Bye';
 import Presentation from '@/components/presentationSection/Presentation'
 import Game from '@/components/gameSection/Game'
-
+import Control from '@/components/gameSection/Control';
 
 export default function Index() {
   return (
@@ -26,7 +26,6 @@ export default function Index() {
       <Navbar />
       <BackgroundImage />
       <BackCanvas />
-      {/* <FrontCanvas /> */}
       <Home />
       <About />
       <Project />
@@ -34,6 +33,7 @@ export default function Index() {
       <Bye />
       <Presentation />
       <Game />
+      <Control />
     </div>
   )
 }

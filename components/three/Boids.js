@@ -6,7 +6,7 @@ import Biont from "@/components/three/Biont"
 
 
 const Boids = () => {
-    const { boids, setBoids } = useContext(BoidsContext);
+    const { boids, params } = useContext(BoidsContext);
     const sceneRef = useRef();
     
     const count = boids.length
@@ -29,7 +29,7 @@ const Boids = () => {
                     id={biont}
                     position={[Math.random() * 10 - 5, Math.random() * 10 - 5, Math.random() * 10 - 5]}
                     gltf={gltfs[index]}
-                    mode="fish"
+                    mode={params.objectType}
                 />
             ))}
         </scene>
