@@ -1,16 +1,28 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useContext } from 'react';
 import { FaFish } from "react-icons/fa";
 import { BoidsContext } from '@/contexts/BoidsContext';
-import { useContext } from 'react';
 
 
 const AddFish = () => {
-    const { boids, setBoids, isEndOfPage } = useContext(BoidsContext);
+    const { boids, setBoids, isEndOfPage, showBoids, setShowBoids } = useContext(BoidsContext);
     const [rect, setRect] = useState()
     const Add = () => {
         setBoids([...boids, boids.length + 1])
+        console.log("befor",showBoids)
+        setShowBoids(true)
     }
     const stalkerRef = useRef();
+
+    useEffect(() => {
+        if (showBoids) {
+            const timer = setTimeout(() => {
+                setShowBoids(false);
+            }, 1000);
+            console.log(showBoids)
+
+            return () => clearTimeout(timer);
+        }
+    }, [showBoids]);
 
     useEffect(() => {
         if (stalkerRef.current) {
