@@ -6,7 +6,7 @@ const Box = ({position, id}) => {
 
     return (
         <mesh position={position} name={id}>
-            <boxGeometry attach="geometry" args={[params.boxScaleX, params.boxScaleY, params.boxScaleZ]}/>
+            <boxGeometry attach="geometry" args={[params.boxScaleX * params.boxScale, params.boxScaleY * params.boxScale, params.boxScaleZ * params.boxScale]}/>
             <meshStandardMaterial attach="material" color={params.boxColor} />
         </mesh>
     )

@@ -30,7 +30,7 @@ const Whale = () => {
         <Suspense fallback={<ThreeLoader />}>
             <group ref={group} dispose={null}>
                 <group>
-                    <primitive object={gltf.scene} position={[0, 0, 0]} rotation={[0, 0, 0]} scale={params.whaleScale * 0.4}/>
+                    <primitive object={gltf.scene} position={[0, 0, 0]} rotation={[0, 0, 0]} scale={params.whaleScale * 0.3}/>
                 </group>
             </group>
         </Suspense>
