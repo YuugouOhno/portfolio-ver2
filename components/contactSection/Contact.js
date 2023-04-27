@@ -4,10 +4,14 @@ import { useTheme } from 'next-themes';
 import AccountLists from "@/components/contactSection/AccountLists"
 import CardAndTitle from "@/components/animation/CardAndTitle";
 
+import { useContext } from 'react';
+import { BoidsContext } from '@/contexts/BoidsContext';
+
 const Contact = () => {
     const { theme } = useTheme();
+    const { showBoids } = useContext(BoidsContext);
     return (
-        <section id="contact" className="h-screen w-screen flex flex-col justify-center items-center text-black bg-white dark:text-white dark:bg-black z-30 relative">
+        <section id="contact" className={`${showBoids?"opacity-50 dark:opacity-50":"opacity-100 dark:opacity-100" } transition-opacity duration-1000 ease-in-out pt-20 h-screen w-screen flex flex-col justify-center items-center text-black bg-white dark:text-white dark:bg-black z-30 relative`}>
             <h2 className="text-5xl font-bold text-center mb-5">Contact</h2>
             <div className="flex">
                 <div className="container px-8 py-5 lg:py-8 mx-auto xl:px-5 max-w-screen-lg">

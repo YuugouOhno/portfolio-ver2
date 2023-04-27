@@ -6,10 +6,16 @@ import LanguageToggle from '@/components/elements/LanguageToggle';
 import NowWeather from '@/components/elements/NowWeather';
 import Brackets from '@/components/elements/Brackets';
 import { FaHamburger } from "react-icons/fa";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useTheme } from 'next-themes';
 
+import { BoidsContext } from '@/contexts/BoidsContext';
+
+import { Link as Scroll } from 'react-scroll';
+
 const Navbar = () => {
+    const { isEndOfPage, setIsEndOfPage } = useContext(BoidsContext);
+
     const [isOpen, setIsOpen] = useState(false);
     const [isAffix, setIsAffix] = useState(false);
     const [activeSection, setActiveSection] = useState("");
@@ -25,6 +31,10 @@ const Navbar = () => {
                 const sectionHeight = section.offsetHeight;
                 if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                     setActiveSection(section.id)
+                    setIsEndOfPage(false)
+                    if (section.id == "game" && sectionTop + sectionHeight >= scrollPosition) {
+                        setIsEndOfPage(true)
+                    }
                 }
             });
             // 最初のふわっとするやつ
@@ -47,22 +57,22 @@ const Navbar = () => {
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
                 <div className="hidden md:flex px-4 text-xl">
                     <Link href="#">
-                    {theme=="dark" && <Image
-                        src="/yuugouohno-white.png"
-                        alt="project image"
-                        width={120}
-                        height={60}
-                        layout="fixed"
-                        priority={true}
-                    />}
-                    {theme=="light" && <Image
-                        src="/yuugouohno-black.png"
-                        alt="project image"
-                        width={120}
-                        height={60}
-                        layout="fixed"
-                        priority={true}
-                    />}
+                        {theme == "dark" && <Image
+                            src="/yuugouohno-white.png"
+                            alt="project image"
+                            width={120}
+                            height={60}
+                            layout="fixed"
+                            priority={true}
+                        />}
+                        {theme == "light" && <Image
+                            src="/yuugouohno-black.png"
+                            alt="project image"
+                            width={120}
+                            height={60}
+                            layout="fixed"
+                            priority={true}
+                        />}
                     </Link>
                 </div>
                 <div className="flex md:hidden p-3">
@@ -86,29 +96,74 @@ const Navbar = () => {
                 </div>
                 <div className="items-center justify-center hidden w-full md:flex md:w-auto">
                     <ul className="flex p-3 font-medium rounded-lg space-x-8">
-                        <li><Brackets isSelected={activeSection == 'home' ? true : false}>
-                            <Link href="#home" className={activeSection == 'home' ? 'text-purple-600 hover:text-purple-700' : ''}>Home</Link>
-                        </Brackets></li>
-                        <li><Brackets isSelected={activeSection == 'about' ? true : false}>
-                            <Link href="#about" className={activeSection == 'about' ? 'text-purple-600 hover:text-purple-700' : ''}>About</Link>
-                        </Brackets></li>
-                        <li><Brackets isSelected={activeSection == 'project' ? true : false}>
-                            <Link href="#project" className={activeSection == 'project' ? 'text-purple-600 hover:text-purple-700' : ''}>Project</Link>
-                        </Brackets></li>
-                        <li><Brackets isSelected={activeSection == 'contact' ? true : false}>
-                            <Link href="#contact" className={activeSection == 'contact' ? 'text-purple-600 hover:text-purple-700' : ''}>Contact</Link>
-                        </Brackets></li>
-                        <li><Brackets isSelected={activeSection == 'preesntation' ? true : false}>
-                            <Link href="#preesntation" className={activeSection == 'preesntation' ? 'text-purple-600 hover:text-purple-700' : ''}>Preesntation</Link>
-                        </Brackets></li>
+                        <li>
+                            <Brackets isSelected={activeSection == 'home' ? true : false}>
+                                <Scroll
+                                    to="home"
+                                    className={activeSection == 'home' ? 'text-purple-600 hover:text-purple-700 hover:cursor-pointer' : 'hover:cursor-pointer'}
+                                    smooth={true}
+                                    duration={800}
+                                >
+                                    Home
+                                </Scroll>
+                            </Brackets>
+                        </li>
+                        <li>
+                            <Brackets isSelected={activeSection == 'about' ? true : false}>
+                                <Scroll
+                                    to="about"
+                                    className={activeSection == 'about' ? 'text-purple-600 hover:text-purple-700 hover:cursor-pointer' : 'hover:cursor-pointer'}
+                                    smooth={true}
+                                    duration={800}
+                                >
+                                    About
+                                </Scroll>
+                            </Brackets>
+                        </li>
+                        <li>
+                            <Brackets isSelected={activeSection == 'project' ? true : false}>
+                                <Scroll
+                                    to="project"
+                                    className={activeSection == 'project' ? 'text-purple-600 hover:text-purple-700 hover:cursor-pointer' : 'hover:cursor-pointer'}
+                                    smooth={true}
+                                    duration={800}
+                                >
+                                    Project
+                                </Scroll>
+                            </Brackets>
+                        </li>
+                        <li>
+                            <Brackets isSelected={activeSection == 'contact' ? true : false}>
+                                <Scroll
+                                    to="contact"
+                                    className={activeSection == 'contact' ? 'text-purple-600 hover:text-purple-700 hover:cursor-pointer' : 'hover:cursor-pointer'}
+                                    smooth={true}
+                                    duration={800}
+                                >
+                                    Contact
+                                </Scroll>
+                            </Brackets>
+                        </li>
+                        <li>
+                            <Brackets isSelected={activeSection == 'presntation' ? true : false}>
+                                <Scroll
+                                    to="presntation"
+                                    className={activeSection == 'presntation' ? 'text-purple-600 hover:text-purple-700 hover:cursor-pointer' : 'hover:cursor-pointer'}
+                                    smooth={true}
+                                    duration={800}
+                                >
+                                    Presntation
+                                </Scroll>
+                            </Brackets>
+                        </li>
 
                     </ul>
                 </div>
                 <div className="flex">
                     <DarkModeToggle />
-                    <AddFish />
                     {/* <LanguageToggle /> */}
                     <NowWeather />
+                    <AddFish />
                 </div>
             </div>
         </nav >

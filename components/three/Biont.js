@@ -1,25 +1,16 @@
-import { Children, useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Vector3 } from 'three';
 
 import Fish from "@/components/three/Fish"
+import Box from "@/components/three/Box"
+import Sphere from "@/components/three/Sphere"
+
+import { BoidsContext } from '@/contexts/BoidsContext';
 
 
 const Biont = ({ id, sceneRef, position, gltf, mode }) => {
-    const weight_to_separation = 1
-    const weight_to_alignment = 0.001
-    const weight_to_cohesion = 0.001
-    const weight_to_center = 0.0001
-    const weight_speed = 1
-
-    const max_speed = 1
-
-    const action_range = 50
-
-    const separation_range = action_range * 0.05
-    const alignment_range = action_range * 0.3
-    const cohesion_range = action_range * 0.3
-
+    const { params } = useContext(BoidsContext);
 
     const boids = []
     let this_biont, v_separation, v_alignment, v_cohesion
@@ -41,7 +32,7 @@ const Biont = ({ id, sceneRef, position, gltf, mode }) => {
         const separation_vector = new Vector3(0, 0, 0);
         let separation_count = 0;
         boids.filter(biont =>
-            biont.position.distanceTo(this_biont.position) < separation_range
+            biont.position.distanceTo(this_biont.position) < params.separation_range
             // && isInTheFieldOfVision(this_biont.position, biont.position)
         ).map((biont) => {
             const closeness = 1 / (Math.floor(biont.position.distanceTo(this_biont.position)) ** 2 + 1);
@@ -51,7 +42,7 @@ const Biont = ({ id, sceneRef, position, gltf, mode }) => {
         if (separation_count) {
             separation_vector.divideScalar(separation_count);
         }
-        v_separation = separation_vector.multiplyScalar(weight_to_separation);
+        v_separation = separation_vector.multiplyScalar(params.weight_to_separation);
         // console.log("分離（Separation）", v_separation)
     }
 
@@ -62,7 +53,7 @@ const Biont = ({ id, sceneRef, position, gltf, mode }) => {
         const alignment_vector = new Vector3();
         let alignment_count = 0;
         boids.filter(biont =>
-            biont.position.distanceTo(this_biont.position) < alignment_range
+            biont.position.distanceTo(this_biont.position) < params.alignment_range
             && isInTheFieldOfVision(this_biont.position, biont.position)
         ).map((biont) => {
             alignment_vector.add(direction.applyQuaternion(biont.quaternion));
@@ -71,7 +62,7 @@ const Biont = ({ id, sceneRef, position, gltf, mode }) => {
         if (alignment_count) {
             alignment_vector.divideScalar(alignment_count);
         }
-        v_alignment = alignment_vector.multiplyScalar(weight_to_alignment);
+        v_alignment = alignment_vector.multiplyScalar(params.weight_to_alignment);
         // console.log("整列（Alignment）", v_alignment)
     }
 
@@ -82,7 +73,7 @@ const Biont = ({ id, sceneRef, position, gltf, mode }) => {
         const cohesion_vector = new Vector3();
         let cohesion_count = 0;
         boids.filter(biont =>
-            biont.position.distanceTo(this_biont.position) < cohesion_range &&
+            biont.position.distanceTo(this_biont.position) < params.cohesion_range &&
             isInTheFieldOfVision(this_biont.position, biont.position)
         ).forEach(biont => {
             cohesion_vector.add(biont.position.clone());
@@ -91,7 +82,7 @@ const Biont = ({ id, sceneRef, position, gltf, mode }) => {
         if (cohesion_count) {
             cohesion_vector.divideScalar(cohesion_count).sub(this_biont.position);
         }
-        v_cohesion = cohesion_vector.multiplyScalar(weight_to_cohesion);
+        v_cohesion = cohesion_vector.multiplyScalar(params.weight_to_cohesion);
         // console.log("凝集（Cohesion）", v_cohesion)
     }
 
@@ -102,9 +93,9 @@ const Biont = ({ id, sceneRef, position, gltf, mode }) => {
 
     // 行動範囲の制限
     const setActionRange = () => {
-        if (center_of_boids.distanceTo(this_biont.position) > action_range) {
-            const distance = center_of_boids.distanceTo(this_biont.position) - action_range;
-            v.sub(this_biont.position.clone().multiplyScalar(0.1).multiplyScalar(distance * weight_to_center));
+        if (center_of_boids.distanceTo(this_biont.position) > params.action_range) {
+            const distance = center_of_boids.distanceTo(this_biont.position) - params.action_range;
+            v.sub(this_biont.position.clone().multiplyScalar(0.1).multiplyScalar(distance * params.weight_to_center));
         }
     }
 
@@ -116,11 +107,14 @@ const Biont = ({ id, sceneRef, position, gltf, mode }) => {
         v.add(v_separation)
         v.add(v_alignment)
         v.add(v_cohesion)
-        v.multiplyScalar(weight_speed);
-        if (v.length() > max_speed) {
-            v.multiplyScalar(max_speed / v.length());
+        v.multiplyScalar(params.speed);
+        v.x *= params.vectorX;
+        v.y *= params.vectorY;
+        v.z *= params.vectorZ;
+        if (v.length() > params.max_speed) {
+            v.multiplyScalar(params.max_speed / v.length());
         }
-        v.y *= 0.9;
+
     }
 
     useEffect(() => {
@@ -130,6 +124,16 @@ const Biont = ({ id, sceneRef, position, gltf, mode }) => {
                     boids.push(obj)
                 }
                 if (obj.type === "Mesh" && obj.geometry.type === "BoxGeometry" && obj.name == id) {
+                    this_biont = obj
+                    this_biont.position.set(...position)
+                }
+            })
+        } else if (mode == "sphere") {
+            sceneRef.current.traverse((obj) => {
+                if (obj.type === "Mesh" && obj.geometry.type === "SphereGeometry" && obj.name != id) {
+                    boids.push(obj)
+                }
+                if (obj.type === "Mesh" && obj.geometry.type === "SphereGeometry" && obj.name == id) {
                     this_biont = obj
                     this_biont.position.set(...position)
                 }
@@ -162,14 +166,14 @@ const Biont = ({ id, sceneRef, position, gltf, mode }) => {
 
 
         <>
-            {mode == "box" && (
-                <mesh position={position} name={id}>
-                    <boxGeometry attach="geometry" args={[1, 1, 1]} />
-                    <meshStandardMaterial attach="material" color="hotpink" />
-                </mesh>
-            )}
             {mode == "fish" && (
                 <Fish gltf={gltf} id={id} position={position} />
+            )}
+            {mode == "box" && (
+                <Box position={position} id={id} />
+            )}
+            {mode == "sphere" && (
+                <Sphere gltf={gltf} id={id} position={position} />
             )}
 
         </>

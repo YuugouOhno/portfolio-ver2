@@ -18,7 +18,7 @@ const DarkModeToggle = () => {
     <button
       aria-label="DarkModeToggle"
       type="button"
-      className="p-3 h-12 w-12 order-2"
+      className="m-1 p-3 h-12 w-12 order-3 bg-opacity-50 dark:bg-opacity-50 bg-gray-300 dark:bg-gray-700 rounded-full"
       onClick={() => darkMode()}
     >
       {mounted && (

@@ -1,13 +1,16 @@
-import { useEffect, useRef, Suspense } from 'react'
+import { useEffect, useRef, Suspense, useContext } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import ThreeLoader from '@/components/three/ThreeLoader'
+import { BoidsContext } from '@/contexts/BoidsContext';
 
 const ModelPath = '/models/whale1.glb'
 
 useGLTF.preload(ModelPath)
 
 const Whale = () => {
+    const { params } = useContext(BoidsContext);
+
     const group = useRef()
     const { size } = useThree()
     const gltf = useGLTF(ModelPath)
@@ -26,8 +29,8 @@ const Whale = () => {
     return (
         <Suspense fallback={<ThreeLoader />}>
             <group ref={group} dispose={null}>
-                <group scale={0.6}>
-                    <primitive object={gltf.scene} position={[0, 0, 0]} rotation={[0, 0, 0]} scale={0.6} />
+                <group>
+                    <primitive object={gltf.scene} position={[0, 0, 0]} rotation={[0, 0, 0]} scale={params.whaleScale * 0.3}/>
                 </group>
             </group>
         </Suspense>

@@ -21,8 +21,9 @@ const AboutMe = () => {
                     </div>
                     <div className="container md:mx-10 flex flex-col items-center">
                         <p className="text-left"> 始めまして大野優剛(おおのゆうごう)です。
-                            <br />早稲田大学創造理工学部環境資源工学科4年、伊坪研究室でLCAの研究をしています。
-                            2024年4月からチームラボという会社でwebエンジニアをします。
+                            <br />早稲田大学創造理工学部環境資源工学科4年、伊坪研究室でLCA(ライフサイクルアセスメント)の研究をしています。
+                            2024年4月からwebエンジニアになる予定です。
+                            <br />現在は「大学生のうちにいっぱいハッカソンに出る」を目標にweb開発や統計の勉強(研究室)をしています。
                             <br />趣味は旅行、ジャグリング、ベース、ギターです。あと、人と喋るのが好きです。
                         </p>
                             {/* <GitHubCalendar username="YuugouOhno" colorScheme={theme} theme={{
