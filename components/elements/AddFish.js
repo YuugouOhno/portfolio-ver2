@@ -71,7 +71,7 @@ const AddFish = () => {
                         ref={stalkerRef}
                         aria-label="add fish"
                         type="button"
-                        className="m-1 p-3 h-12 w-12 order-5 bg-gray-300 dark:bg-gray-700 rounded-full"
+                        className="m-1 p-3 h-12 w-12 order-5  bg-opacity-50 dark:bg-opacity-50 bg-gray-300 dark:bg-gray-700 rounded-full"
                         onClick={() => Add()}
                     >
                         <FaFish className="h-6 w-6" />

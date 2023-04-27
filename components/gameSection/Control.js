@@ -21,6 +21,7 @@ const Control = () => {
 
     return (
         <div className={`${showControl ? "" : "hidden"} fixed bottom-0 right-0 w-auto h-auto z-50 bg-gray-300 dark:bg-gray-700 bg-opacity-70 dark:bg-opacity-70 text-black dark:text-white`}>
+            <div className="fixed t-3 r-3">X</div>
             <div className="flex items-center m-1">
                 <label for="select_object_type" class="mr-2">オブジェクトの種類</label>
                 <select
