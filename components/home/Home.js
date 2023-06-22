@@ -9,7 +9,7 @@ const Home = () => {
                         Yuugou Ohno
                     </h1>
                     <h2 className="text-5xl font-bold text-center text-white">
-                        web enginner
+                        web engineer
                     </h2>
                 </div>
             </section >
